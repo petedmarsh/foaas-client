@@ -45,12 +45,12 @@ Version `0.0.2` of the FOAAS API is supported.
 
 #### Life
 
-	fuck.donut('Alice')
+	fuck.life('Alice')
 	#=> { 'message' => 'Fuck my life.', 'subtitle' => '- Alice'}
 
 #### Pink
 
-	fuck.donut('Alice')
+	fuck.pink('Alice')
 	#=> { 'message' => 'Well, Fuck me pink.', 'subtitle' => '- Alice'}
 
 #### That
