@@ -1,5 +1,7 @@
 # Foaas Client
 
+[![Build Status](https://travis-ci.org/petedmarsh/foaas-client.png)](https://travis-ci.org/petedmarsh/foaas-client)
+
 A client for [FOAAS](http://foaas.com).
 
 ## API Version
