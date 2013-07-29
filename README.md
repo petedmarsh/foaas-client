@@ -18,6 +18,7 @@ Version `0.0.2` of the FOAAS API is supported.
 
     fuck = Foaas::Client.new
     fuck.off('Bob', 'Alice')
+    #=> { 'message' => 'Fuck off, Bob.' 'subtitle' => '- Alice'}
 
 ### Response Types
 
