@@ -53,7 +53,7 @@ Version `0.0.2` of the FOAAS API is supported.
 
 #### This
 
-	fuck.this(Alice') # { 'message' => 'Fuck this.', 'subtitle' => '- Alice'}
+	fuck.this('Alice') # { 'message' => 'Fuck this.', 'subtitle' => '- Alice'}
 
 #### Chainsaw
 
