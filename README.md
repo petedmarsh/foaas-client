@@ -43,6 +43,11 @@ Version `0.0.2` of the FOAAS API is supported.
 	fuck.everything('Alice')
 	#=> { 'message' => 'Fuck everything.', 'subtitle' => '- Alice'}
 
+### Flying
+
+	fuck.flying('Alice')
+	#=> { 'message' => 'I don't give a flying fuck.', 'subtitle' => '- Alice'}
+
 #### Life
 
 	fuck.life('Alice')
