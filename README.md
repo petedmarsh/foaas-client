@@ -88,6 +88,11 @@ Version `0.0.2` of the FOAAS API is supported.
 	fuck.off('Bob', 'Alice')
 	#=> { 'message' => 'Fuck off, Bob.', 'subtitle' => '- Alice'}
 
+### Outside
+
+	fuck.off('Bob', 'Alice')
+	#=> { 'message' => 'Bob, why don't you go outside and play hide-and-go-fuck-yourself?', 'subtitle' => '- Alice'}
+
 #### Shakespeare
 
 	fuck.shakespeare('Bob', 'Alice')

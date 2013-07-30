@@ -10,7 +10,7 @@ describe Foaas::Client do
 		RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
 	end
 
-	[:off, :you, :donut, :shakespeare, :linus, :king, :chainsaw].each do |method|
+	[:off, :you, :donut, :shakespeare, :linus, :king, :chainsaw, :outside].each do |method|
 		describe "##{method}" do
 
 			let(:name) { 'name' }

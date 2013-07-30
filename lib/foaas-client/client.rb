@@ -9,7 +9,7 @@ module Foaas
 
     def method_missing(sym, *args)
       case sym
-        when :off, :you, :donut, :shakespeare, :linus, :king, :chainsaw
+        when :off, :you, :donut, :shakespeare, :linus, :king, :chainsaw, :outside
           make_request(URL.expand(method: sym, name: args[0], from: args[1]), args[2])
         when :this, :everything, :everyone, :pink, :life, :thanks, :flying
           make_request(URL.expand(method: sym, from: args[0]), args[1])
