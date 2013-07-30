@@ -63,7 +63,7 @@ describe Foaas::Client do
 						let(:type) { :text }
 						let(:accept) { 'text/plain' }
 
-						it 'specifies application/json as the accept type' do
+						it 'specifies text/plain as the accept type' do
 							client.send(method, name, from, type)
 						end
 					end
@@ -127,7 +127,7 @@ describe Foaas::Client do
 						let(:type) { :text }
 						let(:accept) { 'text/plain'}
 
-						it 'specifies application/json as the accept type' do
+						it 'specifies text/plain as the accept type' do
 							client.send(method, from, type)
 						end
 					end
@@ -189,7 +189,7 @@ describe Foaas::Client do
 					let(:type) { :text }
 					let(:accept) { 'text/plain' }
 
-					it 'specifies application/json as the accept type' do
+					it 'specifies text/plain as the accept type' do
 						client.thing(thing, from, type)
 					end
 				end
