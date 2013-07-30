@@ -4,14 +4,18 @@ require 'foaas-client/client'
 
 describe Foaas::Client do
 
-	let(:client) { Foaas::Client.new }
-
-	before do
-		RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
+	it 'raises an exception if a method is unsupported' do
+		expect { client.not_a_foaas_method }.to raise_error NoMethodError
 	end
+
+	let(:client) { Foaas::Client.new }
 
 	Foaas::Client::METHODS_TWO_PARAMS.each do |method|
 		describe "##{method}" do
+
+			before do
+				RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
+			end
 
 			let(:name) { 'name' }
 			let(:from) { 'from' }
@@ -79,6 +83,10 @@ describe Foaas::Client do
 	Foaas::Client::METHODS_ONE_PARAM.each do |method|
 		describe "##{method}" do
 
+			before do
+				RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
+			end
+
 			let(:url) { "http://foaas.com/#{method}/#{from}" }
 			let(:from) { 'from' }
 			let(:type) { nil }
@@ -140,6 +148,10 @@ describe Foaas::Client do
 	end
 
 	describe '#thing' do
+
+		before do
+			RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
+		end
 
 		let(:url) { "http://foaas.com/#{thing}/#{from}" }
 		let(:thing) { 'thing' }
