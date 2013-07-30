@@ -10,7 +10,7 @@ describe Foaas::Client do
 		RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
 	end
 
-	[:off, :you, :donut, :shakespeare, :linus, :king, :chainsaw, :outside].each do |method|
+	Foaas::Client::METHODS_TWO_PARAMS.each do |method|
 		describe "##{method}" do
 
 			let(:name) { 'name' }
@@ -76,7 +76,7 @@ describe Foaas::Client do
 	end
 
 
-	[:this, :everything, :everyone, :pink, :life, :thanks, :flying].each do |method|
+	Foaas::Client::METHODS_ONE_PARAM.each do |method|
 		describe "##{method}" do
 
 			let(:url) { "http://foaas.com/#{method}/#{from}" }

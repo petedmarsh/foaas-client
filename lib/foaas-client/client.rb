@@ -7,13 +7,15 @@ module Foaas
 
   	URL = Addressable::Template.new("http://foaas.com/{method}{/name}/{from}")
 
+    METHODS_ONE_PARAM = [:this, :everything, :everyone, :pink, :life, :thanks, :flying]
+    METHODS_TWO_PARAMS = [:off, :you, :donut, :shakespeare, :linus, :king, :chainsaw, :outside]
+
     def method_missing(sym, *args)
-      case sym
-        when :off, :you, :donut, :shakespeare, :linus, :king, :chainsaw, :outside
+        if METHODS_TWO_PARAMS.include? sym
           make_request(URL.expand(method: sym, name: args[0], from: args[1]), args[2])
-        when :this, :everything, :everyone, :pink, :life, :thanks, :flying
+        elsif  METHODS_ONE_PARAM.include? sym
           make_request(URL.expand(method: sym, from: args[0]), args[1])
-        when :thing
+        elsif sym == :thing
           make_request(URL.expand(method: args[0], from: args[1]), args[2])
         end
     end
