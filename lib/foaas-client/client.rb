@@ -22,6 +22,10 @@ module Foaas
         end
     end
 
+    def respond_to?(sym, include_private = false)
+      METHODS_ONE_PARAM.include?(sym) or METHODS_TWO_PARAMS.include?(sym) or sym == :thing or super(sym, include_private)
+    end
+
   	private
 
   	def make_request(url, type)

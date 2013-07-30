@@ -212,4 +212,34 @@ describe Foaas::Client do
 
 	end
 
+	describe '#respond_to?' do
+
+		let(:sym) { nil }
+
+		subject do
+			client.respond_to?(sym)
+		end
+
+		(Foaas::Client::METHODS_ONE_PARAM + Foaas::Client::METHODS_TWO_PARAMS + [:thing]).each do |method|
+
+			context "for :#{method}" do
+
+				let(:sym) { method }
+
+				it { should be_true }
+
+			end
+
+			context 'for non-FOAAS methods' do
+
+				let(:sym) { :not_a_foaas_method }
+
+				it { should be_false }
+
+			end
+
+		end
+
+	end
+
 end
