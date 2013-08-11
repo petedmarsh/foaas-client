@@ -20,11 +20,14 @@ fuck.off('Bob', 'Alice')
 ### Response Types
 
 ```ruby
-fuck.off('Bob', 'Alice', :json) # { 'message' => 'Fuck off, Bob.' 'subtitle' => '- Alice' }
+fuck.off('Bob', 'Alice', :json)
+#=> { 'message' => 'Fuck off, Bob.' 'subtitle' => '- Alice' }
 
-fuck.off('Bob', 'Alice', :text) # 'Fuck off, Bob. - Alice'
+fuck.off('Bob', 'Alice', :text)
+#=> 'Fuck off, Bob. - Alice'
 
-fuck.off('Bob', 'Alice', :html) # '<html>...</html>'
+fuck.off('Bob', 'Alice', :html)
+#=> '<html>...</html>'
 ```
 
 ### Methods
