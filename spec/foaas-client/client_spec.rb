@@ -4,14 +4,18 @@ require 'foaas-client/client'
 
 describe Foaas::Client do
 
-	let(:client) { Foaas::Client.new }
-
-	before do
-		RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
+	it 'raises an exception if a method is unsupported' do
+		expect { client.not_a_foaas_method }.to raise_error NoMethodError
 	end
 
-	[:off, :you, :donut, :shakespeare, :linus, :king, :chainsaw].each do |method|
+	let(:client) { Foaas::Client.new }
+
+	Foaas::Client::METHODS_TWO_PARAMS.each do |method|
 		describe "##{method}" do
+
+			before do
+				RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
+			end
 
 			let(:name) { 'name' }
 			let(:from) { 'from' }
@@ -63,7 +67,7 @@ describe Foaas::Client do
 						let(:type) { :text }
 						let(:accept) { 'text/plain' }
 
-						it 'specifies application/json as the accept type' do
+						it 'specifies text/plain as the accept type' do
 							client.send(method, name, from, type)
 						end
 					end
@@ -76,8 +80,12 @@ describe Foaas::Client do
 	end
 
 
-	[:this, :everything, :everyone, :pink, :life, :thanks, :flying].each do |method|
+	Foaas::Client::METHODS_ONE_PARAM.each do |method|
 		describe "##{method}" do
+
+			before do
+				RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
+			end
 
 			let(:url) { "http://foaas.com/#{method}/#{from}" }
 			let(:from) { 'from' }
@@ -127,7 +135,7 @@ describe Foaas::Client do
 						let(:type) { :text }
 						let(:accept) { 'text/plain'}
 
-						it 'specifies application/json as the accept type' do
+						it 'specifies text/plain as the accept type' do
 							client.send(method, from, type)
 						end
 					end
@@ -140,6 +148,10 @@ describe Foaas::Client do
 	end
 
 	describe '#thing' do
+
+		before do
+			RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
+		end
 
 		let(:url) { "http://foaas.com/#{thing}/#{from}" }
 		let(:thing) { 'thing' }
@@ -189,11 +201,41 @@ describe Foaas::Client do
 					let(:type) { :text }
 					let(:accept) { 'text/plain' }
 
-					it 'specifies application/json as the accept type' do
+					it 'specifies text/plain as the accept type' do
 						client.thing(thing, from, type)
 					end
 				end
 	
+			end
+
+		end
+
+	end
+
+	describe '#respond_to?' do
+
+		let(:sym) { nil }
+
+		subject do
+			client.respond_to?(sym)
+		end
+
+		(Foaas::Client::METHODS_ONE_PARAM + Foaas::Client::METHODS_TWO_PARAMS + [:thing]).each do |method|
+
+			context "for :#{method}" do
+
+				let(:sym) { method }
+
+				it { should be_true }
+
+			end
+
+			context 'for non-FOAAS methods' do
+
+				let(:sym) { :not_a_foaas_method }
+
+				it { should be_false }
+
 			end
 
 		end
