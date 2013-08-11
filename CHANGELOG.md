@@ -4,6 +4,7 @@
 
 * Implement the following FOAAS methods:
   * Outside
+  * Fascinating
 * Raise `NoMethodError` if unsupported method is called on `Foaas::Client`
 * Fix errors in README
 

@@ -43,6 +43,13 @@ fuck.everything('Alice')
 #=> { 'message' => 'Fuck everything.', 'subtitle' => '- Alice'}
 ```
 
+#### Fascinating
+
+```ruby
+fuck.fascinating('Alice')
+#=> { 'message' => 'Fascinating story, in what chapter do you shut the fuck up?', 'subtitle' => '- Alice'}
+```
+
 #### Life
 
 ```ruby
