@@ -9,7 +9,7 @@ module Foaas
 
     METHODS_ONE_PARAM = [:because, :cool, :everyone, :everything, :fascinating, :flying, :life, :pink, :thanks, :this, :what]
     METHODS_TWO_PARAMS = [:donut, :caniuse, :chainsaw, :king, :linus, :madison, :nugget, :off, :outside, :shakespeare, :you, :yoda]
-    METHODS_THREE_PARAMS = [:field]
+    METHODS_THREE_PARAMS = [:ballmer, :field]
 
     def method_missing(sym, *args, &block)
         if METHODS_TWO_PARAMS.include? sym
