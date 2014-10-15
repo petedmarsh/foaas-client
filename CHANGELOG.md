@@ -1,5 +1,7 @@
 # Changelog
 
+## HEAD
+
 ## v0.2.0
 
 * Fix errors in README
