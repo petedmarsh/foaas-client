@@ -52,11 +52,25 @@ fuck.caniuse('Bob', 'Alice')
 #=> { 'message' => 'Can you use Bob? Fuck no!', 'subtitle' => '- Alice' }
 ```
 
+#### Chainsaw
+
+```ruby
+fuck.chainsaw('Bob', 'Alice')
+#=> { 'message' => 'Fuck me gently with a chainsaw, Bob. Do I look like Mother Teresa?', 'subtitle' => '- Alice' }
+```
+
 ### Cool
 
 ```ruby
 fuck.cool('Alice')
 #=> { 'message' => 'Cool story, Bro', '- Alice' }
+```
+
+#### Donut
+
+```ruby
+fuck.donut('Bob', 'Alice')
+#=> { 'message' => 'Bob, go and take a flying fuck at a rolling donut.', 'subtitle' => '- Alice' }
 ```
 
 #### Everyone
@@ -80,53 +94,18 @@ fuck.fascinating('Alice')
 #=> { 'message' => 'Fascinating story, in what chapter do you shut the fuck up?', 'subtitle' => '- Alice' }
 ```
 
-#### Life
-
-```ruby
-fuck.life('Alice')
-#=> { 'message' => 'Fuck my life.', 'subtitle' => '- Alice' }
-```
-
-#### Pink
-
-```ruby
-fuck.pink('Alice')
-#=> { 'message' => 'Well, Fuck me pink.', 'subtitle' => '- Alice' }
-```
-
-#### That
-
-```ruby
-fuck.that('Alice')
-#=> { 'message' => 'Fuck that', 'subtitle' => '- Alice' }
-```
-
-#### This
-
-```ruby
-fuck.this('Alice')
-#=> { 'message' => 'Fuck this.', 'subtitle' => '- Alice' }
-```
-
-#### Chainsaw
-
-```ruby
-fuck.chainsaw('Bob', 'Alice')
-#=> { 'message' => 'Fuck me gently with a chainsaw, Bob. Do I look like Mother Teresa?', 'subtitle' => '- Alice' }
-```
-
-#### Donut
-
-```ruby
-fuck.donut('Bob', 'Alice')
-#=> { 'message' => 'Bob, go and take a flying fuck at a rolling donut.', 'subtitle' => '- Alice' }
-```
-
 #### King
 
 ```ruby
 fuck.king('Bob', 'Alice')
 #=> { 'message' => 'Oh fuck off, just really fuck off you total dickface. Christ Bob, you are fucking thick.', 'subtitle' => '- Alice' }
+```
+
+#### Life
+
+```ruby
+fuck.life('Alice')
+#=> { 'message' => 'Fuck my life.', 'subtitle' => '- Alice' }
 ```
 
 #### Linus
@@ -164,6 +143,13 @@ fuck.outside('Bob', 'Alice')
 #=> { 'message' => 'Bob, why don\'t you go outside and play hide-and-go-fuck-yourself?', 'subtitle' => '- Alice' }
 ```
 
+#### Pink
+
+```ruby
+fuck.pink('Alice')
+#=> { 'message' => 'Well, Fuck me pink.', 'subtitle' => '- Alice' }
+```
+
 #### Shakespeare
 
 ```ruby
@@ -178,6 +164,34 @@ fuck.thanks('Bob', 'Alice')
 #=> { 'message' => 'Fuck you very much', 'subtitle' => '- Alice' }
 ```
 
+#### That
+
+```ruby
+fuck.that('Alice')
+#=> { 'message' => 'Fuck that', 'subtitle' => '- Alice' }
+```
+
+#### Thing
+
+```ruby
+fuck.thing('it', 'Alice')
+#=> { 'message' => 'Fuck it.', 'subtitle' => '- Alice' }
+```
+
+#### This
+
+```ruby
+fuck.this('Alice')
+#=> { 'message' => 'Fuck this.', 'subtitle' => '- Alice' }
+```
+
+### What
+
+```ruby
+fuck.what('Alice')
+#=> { 'message' => 'What the fuck?!', 'subtitle' => '- Alice' }
+```
+
 ### Yoda
 
 ```ruby
@@ -190,18 +204,4 @@ fuck.yoda('Bob', 'Alice')
 ```ruby
 fuck.you('Bob', 'Alice')
 #=> { 'message' => 'Fuck you, Bob.', 'subtitle' => '- Alice' }
-```
-
-#### Thing
-
-```ruby
-fuck.thing('it', 'Alice')
-#=> { 'message' => 'Fuck it.', 'subtitle' => '- Alice' }
-```
-
-### What
-
-```ruby
-fuck.what('Alice')
-#=> { 'message' => 'What the fuck?!', 'subtitle' => '- Alice' }
 ```
