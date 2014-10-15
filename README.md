@@ -184,3 +184,10 @@ fuck.you('Bob', 'Alice')
 fuck.thing('it', 'Alice')
 #=> { 'message' => 'Fuck it.', 'subtitle' => '- Alice' }
 ```
+
+### What
+
+```ruby
+fuck.what('Alice')
+#=> { 'message' => 'What the fuck?!', 'subtitle' => '- Alice' }
+```
