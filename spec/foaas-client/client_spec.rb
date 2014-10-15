@@ -4,242 +4,350 @@ require 'foaas-client/client'
 
 describe Foaas::Client do
 
-	it 'raises an exception if a method is unsupported' do
-		expect { client.not_a_foaas_method }.to raise_error NoMethodError
-	end
+  it 'raises an exception if a method is unsupported' do
+    expect { client.not_a_foaas_method }.to raise_error NoMethodError
+  end
 
-	let(:client) { Foaas::Client.new }
+  let(:client) { Foaas::Client.new }
 
-	Foaas::Client::METHODS_TWO_PARAMS.each do |method|
-		describe "##{method}" do
+  Foaas::Client::METHODS_THREE_PARAMS.each do |method|
+    describe "##{method}" do
 
-			before do
-				RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
-			end
+      before do
+        RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
+      end
 
-			let(:name) { 'name' }
-			let(:from) { 'from' }
-			let(:type) { nil }
+      let(:name) { 'name' }
+      let(:from) { 'from' }
+      let(:other) { 'other' }
+      let(:type) { nil }
 
-			let(:url) { "http://foaas.com/#{method}/#{name}/#{from}" }
+      let(:url) { "http://foaas.com/#{method}/#{name}/#{from}/#{other}" }
 
-			context 'type is' do
+      context 'type is' do
 
-				context 'not specified' do
+        context 'not specified' do
 
-					let(:accept) { :json }
+          let(:accept) { :json }
 
-					it 'defaults to JSON' do
-						client.send(method, name, from, type)
-					end
+          it 'defaults to JSON' do
+            client.send(method, name, from, other, type)
+          end
 
-				end
+        end
 
-				context 'is specified' do
+        context 'is specified' do
 
-					context 'as HTML' do
+          context 'as HTML' do
 
-						let(:type) { :html }
-						let(:accept) { :html }
+            let(:type) { :html }
+            let(:accept) { :html }
 
-						it 'specifies text/html as the accept type' do
-							client.send(method, name, from, type)
-						end
-					end
+            it 'specifies text/html as the accept type' do
+              client.send(method, name, from, other, type)
+            end
+          end
 
-					context 'as JSON' do
+          context 'as JSON' do
 
-						let(:type) { :json }
-						let(:accept) { :json}
+            let(:type) { :json }
+            let(:accept) { :json}
 
-						it 'specifies application/json as the accept type' do
-							client.send(method, name, from, type)
-						end
+            it 'specifies application/json as the accept type' do
+              client.send(method, name, from, other, type)
+            end
 
-						it 'parses the response into a hash' do
-							client.send(method, name, from, type).should == { 'message' => '', 'subtitle' => ''}
-						end
+            it 'parses the response into a hash' do
+              client.send(method, name, from, other, type).should == { 'message' => '', 'subtitle' => ''}
+            end
 
-					end
+          end
 
-					context 'as text' do
+          context 'as text' do
 
-						let(:type) { :text }
-						let(:accept) { 'text/plain' }
+            let(:type) { :text }
+            let(:accept) { 'text/plain' }
 
-						it 'specifies text/plain as the accept type' do
-							client.send(method, name, from, type)
-						end
-					end
-	
-				end
+            it 'specifies text/plain as the accept type' do
+              client.send(method, name, from, other, type)
+            end
+          end
 
-			end
-			
-		end
-	end
+          context 'as xml' do
 
+            let(:type) { :xml }
+            let(:accept) { :xml }
 
-	Foaas::Client::METHODS_ONE_PARAM.each do |method|
-		describe "##{method}" do
+            it 'specifies application/xml as the acccept type' do
+              client.send(method, name, from, other, type)
+            end
+          end
 
-			before do
-				RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
-			end
+        end
 
-			let(:url) { "http://foaas.com/#{method}/#{from}" }
-			let(:from) { 'from' }
-			let(:type) { nil }
+      end
+      
+    end
+  end
 
-			context 'type is' do
 
-				context 'not specified' do
+  Foaas::Client::METHODS_TWO_PARAMS.each do |method|
+    describe "##{method}" do
 
-					let(:accept) { :json }
+      before do
+        RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
+      end
 
-					it 'defaults to JSON' do
-						client.send(method, from, type)
-					end
+      let(:name) { 'name' }
+      let(:from) { 'from' }
+      let(:type) { nil }
 
-				end
+      let(:url) { "http://foaas.com/#{method}/#{name}/#{from}" }
 
-				context 'is specified' do
+      context 'type is' do
 
-					context 'as HTML' do
+        context 'not specified' do
 
-						let(:type) { :html }
-						let(:accept) { :html }
+          let(:accept) { :json }
 
-						it 'specifies text/html as the accept type' do
-							client.send(method, from, type)
-						end
-					end
+          it 'defaults to JSON' do
+            client.send(method, name, from, type)
+          end
 
-					context 'as JSON' do
+        end
 
-						let(:type) { :json }
-						let(:accept) { :json }
+        context 'is specified' do
 
-						it 'specifies application/json as the accept type' do
-							client.send(method, from, type)
-						end
+          context 'as HTML' do
 
-						it 'parses the response into a hash' do
-							client.send(method, from, type).should == { 'message' => '', 'subtitle' => ''}
-						end
+            let(:type) { :html }
+            let(:accept) { :html }
 
-					end
+            it 'specifies text/html as the accept type' do
+              client.send(method, name, from, type)
+            end
+          end
 
-					context 'as text' do
+          context 'as JSON' do
 
-						let(:type) { :text }
-						let(:accept) { 'text/plain'}
+            let(:type) { :json }
+            let(:accept) { :json}
 
-						it 'specifies text/plain as the accept type' do
-							client.send(method, from, type)
-						end
-					end
-	
-				end
+            it 'specifies application/json as the accept type' do
+              client.send(method, name, from, type)
+            end
 
-			end
-			
-		end
-	end
+            it 'parses the response into a hash' do
+              client.send(method, name, from, type).should == { 'message' => '', 'subtitle' => ''}
+            end
 
-	describe '#thing' do
+          end
 
-		before do
-			RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
-		end
+          context 'as text' do
 
-		let(:url) { "http://foaas.com/#{thing}/#{from}" }
-		let(:thing) { 'thing' }
-		let(:from) { 'from' }
-		let(:type) { nil }
+            let(:type) { :text }
+            let(:accept) { 'text/plain' }
 
-		context 'type is' do
+            it 'specifies text/plain as the accept type' do
+              client.send(method, name, from, type)
+            end
+          end
 
-			context 'not specified' do
+          context 'as xml' do
 
-				let(:accept) { :json }
+            let(:type) { :xml }
+            let(:accept) { :xml }
 
-				it 'defaults to JSON' do
-					client.thing(thing, from, type)
-				end
-			end
+            it 'specifies application/xml as the acccept type' do
+              client.send(method, name, from, type)
+            end
+          end
 
-			context 'is specified' do
+        end
 
-				context 'as HTML' do
+      end
+      
+    end
+  end
 
-					let(:type) { :html }
-					let(:accept) { :html }
 
-					it 'specifies text/html as the accept type' do
-						client.thing(thing, from, type)
-					end
-				end
+  Foaas::Client::METHODS_ONE_PARAM.each do |method|
+    describe "##{method}" do
 
-				context 'as JSON' do
+      before do
+        RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
+      end
 
-					let(:type) { :json }
-					let(:accept) { :json }
+      let(:url) { "http://foaas.com/#{method}/#{from}" }
+      let(:from) { 'from' }
+      let(:type) { nil }
 
-					it 'specifies application/json as the accept type' do
-						client.thing(thing, from, type)
-					end
+      context 'type is' do
 
-					it 'parses the response into a hash' do
-						client.thing(thing, from, type).should == { 'message' => '', 'subtitle' => ''}
-					end
-					
-				end
+        context 'not specified' do
 
-				context 'as text' do
+          let(:accept) { :json }
 
-					let(:type) { :text }
-					let(:accept) { 'text/plain' }
+          it 'defaults to JSON' do
+            client.send(method, from, type)
+          end
 
-					it 'specifies text/plain as the accept type' do
-						client.thing(thing, from, type)
-					end
-				end
-	
-			end
+        end
 
-		end
+        context 'is specified' do
 
-	end
+          context 'as HTML' do
 
-	describe '#respond_to?' do
+            let(:type) { :html }
+            let(:accept) { :html }
 
-		let(:sym) { nil }
+            it 'specifies text/html as the accept type' do
+              client.send(method, from, type)
+            end
+          end
 
-		subject do
-			client.respond_to?(sym)
-		end
+          context 'as JSON' do
 
-		(Foaas::Client::METHODS_ONE_PARAM + Foaas::Client::METHODS_TWO_PARAMS + [:thing]).each do |method|
+            let(:type) { :json }
+            let(:accept) { :json }
 
-			context "for :#{method}" do
+            it 'specifies application/json as the accept type' do
+              client.send(method, from, type)
+            end
 
-				let(:sym) { method }
+            it 'parses the response into a hash' do
+              client.send(method, from, type).should == { 'message' => '', 'subtitle' => ''}
+            end
 
-				it { should be_true }
+          end
 
-			end
+          context 'as text' do
 
-			context 'for non-FOAAS methods' do
+            let(:type) { :text }
+            let(:accept) { 'text/plain'}
 
-				let(:sym) { :not_a_foaas_method }
+            it 'specifies text/plain as the accept type' do
+              client.send(method, from, type)
+            end
+          end
 
-				it { should be_false }
+          context 'as xml' do
+            let(:type) { :xml }
+            let(:accept) { :xml }
 
-			end
+            it 'specifies application/xml as the accept type' do
+              client.send(method, from, type)
+            end
+          end
+        end
 
-		end
+      end
+      
+    end
+  end
 
-	end
+  describe '#thing' do
+
+    before do
+      RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
+    end
+
+    let(:url) { "http://foaas.com/#{thing}/#{from}" }
+    let(:thing) { 'thing' }
+    let(:from) { 'from' }
+    let(:type) { nil }
+
+    context 'type is' do
+
+      context 'not specified' do
+
+        let(:accept) { :json }
+
+        it 'defaults to JSON' do
+          client.thing(thing, from, type)
+        end
+      end
+
+      context 'is specified' do
+
+        context 'as HTML' do
+
+          let(:type) { :html }
+          let(:accept) { :html }
+
+          it 'specifies text/html as the accept type' do
+            client.thing(thing, from, type)
+          end
+        end
+
+        context 'as JSON' do
+
+          let(:type) { :json }
+          let(:accept) { :json }
+
+          it 'specifies application/json as the accept type' do
+            client.thing(thing, from, type)
+          end
+
+          it 'parses the response into a hash' do
+            client.thing(thing, from, type).should == { 'message' => '', 'subtitle' => ''}
+          end
+          
+        end
+
+        context 'as text' do
+
+          let(:type) { :text }
+          let(:accept) { 'text/plain' }
+
+          it 'specifies text/plain as the accept type' do
+            client.thing(thing, from, type)
+          end
+        end
+
+        context 'as xml' do
+
+          let(:type) { :xml }
+          let(:accept) { :xml }
+
+          it 'specifies application/xml as the accept type' do
+            client.thing(thing, from, type)
+          end
+        end
+      end
+
+    end
+
+  end
+
+  describe '#respond_to?' do
+
+    let(:sym) { nil }
+
+    subject do
+      client.respond_to?(sym)
+    end
+
+    (Foaas::Client::METHODS_ONE_PARAM + Foaas::Client::METHODS_TWO_PARAMS + [:thing]).each do |method|
+
+      context "for :#{method}" do
+
+        let(:sym) { method }
+
+        it { should eq true }
+
+      end
+
+      context 'for non-FOAAS methods' do
+
+        let(:sym) { :not_a_foaas_method }
+
+        it { should eq false }
+
+      end
+
+    end
+
+  end
 
 end

@@ -1,10 +1,13 @@
 # Foaas Client
 
+[![Build Status](https://travis-ci.org/petedmarsh/foaas-client.png)](https://travis-ci.org/petedmarsh/foaas-client)
+[![Code Climate](https://codeclimate.com/github/petedmarsh/foaas-client.png)](https://codeclimate.com/github/petedmarsh/foaas-client)
+
 A client for [FOAAS](http://foaas.com).
 
 ## API Version
 
-Version `0.0.2` of the FOAAS API is supported.
+Version `0.0.4` of the FOAAS API is supported.
 
 ## Usage
 
@@ -28,9 +31,54 @@ fuck.off('Bob', 'Alice', :text)
 
 fuck.off('Bob', 'Alice', :html)
 #=> '<html>...</html>'
+
+fuck.off('Bob', 'Alice', :xml)
+#=> '<?xml version="1.0" encoding="utf-8"?>'
 ```
 
 ### Methods
+
+### Ballmer
+
+```ruby
+fuck.ballmer('Bob', 'Alice', 'Clara')
+#=> { 'message' => 'Fucking Bob is a fucking pussy. I'm going to fucking bury that guy, I have done it before, and I will do it again. I'm going to fucking kill Alice.', 'subtitle' => 'Clara' }
+```
+
+### Because
+
+```ruby
+fuck.because('Alice')
+#=> { 'message' => 'Why? Because Fuck you, that\'s why.', 'subtitle' => 'Alice' }
+```
+
+### Can I use?
+
+```ruby
+fuck.caniuse('Bob', 'Alice')
+#=> { 'message' => 'Can you use Bob? Fuck no!', 'subtitle' => '- Alice' }
+```
+
+#### Chainsaw
+
+```ruby
+fuck.chainsaw('Bob', 'Alice')
+#=> { 'message' => 'Fuck me gently with a chainsaw, Bob. Do I look like Mother Teresa?', 'subtitle' => '- Alice' }
+```
+
+### Cool
+
+```ruby
+fuck.cool('Alice')
+#=> { 'message' => 'Cool story, Bro', '- Alice' }
+```
+
+#### Donut
+
+```ruby
+fuck.donut('Bob', 'Alice')
+#=> { 'message' => 'Bob, go and take a flying fuck at a rolling donut.', 'subtitle' => '- Alice' }
+```
 
 #### Everyone
 
@@ -53,46 +101,11 @@ fuck.fascinating('Alice')
 #=> { 'message' => 'Fascinating story, in what chapter do you shut the fuck up?', 'subtitle' => '- Alice' }
 ```
 
-#### Life
+### Field
 
 ```ruby
-fuck.donut('Alice')
-#=> { 'message' => 'Fuck my life.', 'subtitle' => '- Alice' }
-```
-
-#### Pink
-
-```ruby
-fuck.donut('Alice')
-#=> { 'message' => 'Well, Fuck me pink.', 'subtitle' => '- Alice' }
-```
-
-#### That
-
-```ruby
-fuck.that('Alice')
-#=> { 'message' => 'Fuck that', 'subtitle' => '- Alice' }
-```
-
-#### This
-
-```ruby
-fuck.this(Alice')
-#=> { 'message' => 'Fuck this.', 'subtitle' => '- Alice' }
-```
-
-#### Chainsaw
-
-```ruby
-fuck.chainsaw('Bob', 'Alice')
-#=> { 'message' => 'Fuck me gently with a chainsaw, Bob. Do I look like Mother Teresa?', 'subtitle' => '- Alice' }
-```
-
-#### Donut
-
-```ruby
-fuck.donut('Bob', 'Alice')
-#=> { 'message' => 'Bob, go and take a flying fuck at a rolling donut.', 'subtitle' => '- Alice' }
+fuck.field('Bob', 'Alice', 'Clara')
+#=> { 'message' => 'And Alice said on to Bob, "Verily, cast thine eyes upon the field in which I grow my fucks", and Bobgave witness onto the field, and saw that it was barren.', => '- Clara' }
 ```
 
 #### King
@@ -102,6 +115,13 @@ fuck.king('Bob', 'Alice')
 #=> { 'message' => 'Oh fuck off, just really fuck off you total dickface. Christ Bob, you are fucking thick.', 'subtitle' => '- Alice' }
 ```
 
+#### Life
+
+```ruby
+fuck.life('Alice')
+#=> { 'message' => 'Fuck my life.', 'subtitle' => '- Alice' }
+```
+
 #### Linus
 
 ```ruby
@@ -109,11 +129,39 @@ fuck.linus('Bob', 'Alice')
 #=> { 'message' => 'Bob, there aren't enough swear-words in the English language, so now I'll have to call you perkeleen vittupää just to express my disgust and frustration with this crap.', 'subtitle' => '- Alice' }
 ```
 
+### Madison
+
+```ruby
+fuck.madison('Bob', 'Alice')
+#=> { 'What you\'ve said is one of the most insantely idiotic things I have ever heard, Bob. At no point in your rambling, incoherent response were you even close to anything that could be considered a rational thought. Everyone in this room is now dumber for having listened to it. I award you no points Bob, and may God have mercy on your soul.', 'subtitle' => '- Alice' }
+```
+
+### Nugget
+
+```ruby
+fuck.nugget('Bob', 'Alice')
+#=> { ''Well Bob, aren\'t you a shining example of a rancid fuck-nugget.', 'subtitle' => '- Alice' }
+```
+
 #### Off
 
 ```ruby
 fuck.off('Bob', 'Alice')
 #=> { 'message' => 'Fuck off, Bob.', 'subtitle' => '- Alice' }
+```
+
+### Outside
+
+```ruby
+fuck.outside('Bob', 'Alice')
+#=> { 'message' => 'Bob, why don\'t you go outside and play hide-and-go-fuck-yourself?', 'subtitle' => '- Alice' }
+```
+
+#### Pink
+
+```ruby
+fuck.pink('Alice')
+#=> { 'message' => 'Well, Fuck me pink.', 'subtitle' => '- Alice' }
 ```
 
 #### Shakespeare
@@ -130,11 +178,11 @@ fuck.thanks('Bob', 'Alice')
 #=> { 'message' => 'Fuck you very much', 'subtitle' => '- Alice' }
 ```
 
-#### You
+#### That
 
 ```ruby
-fuck.you('Bob', 'Alice')
-#=> { 'message' => 'Fuck you, Bob.', 'subtitle' => '- Alice' }
+fuck.that('Alice')
+#=> { 'message' => 'Fuck that', 'subtitle' => '- Alice' }
 ```
 
 #### Thing
@@ -142,4 +190,32 @@ fuck.you('Bob', 'Alice')
 ```ruby
 fuck.thing('it', 'Alice')
 #=> { 'message' => 'Fuck it.', 'subtitle' => '- Alice' }
+```
+
+#### This
+
+```ruby
+fuck.this('Alice')
+#=> { 'message' => 'Fuck this.', 'subtitle' => '- Alice' }
+```
+
+### What
+
+```ruby
+fuck.what('Alice')
+#=> { 'message' => 'What the fuck?!', 'subtitle' => '- Alice' }
+```
+
+### Yoda
+
+```ruby
+fuck.yoda('Bob', 'Alice')
+#=> { 'message' => 'Fuck off, you must, Bob', 'subtitle' => '- Alice' }
+```
+
+#### You
+
+```ruby
+fuck.you('Bob', 'Alice')
+#=> { 'message' => 'Fuck you, Bob.', 'subtitle' => '- Alice' }
 ```

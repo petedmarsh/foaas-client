@@ -1,5 +1,20 @@
 # Changelog
 
+## HEAD
+
+* Fix errors in README
+* Add support for XML response type
+* Implement the following FOAAS methods:
+  * Ballmer
+  * Field
+  * Caniuse
+  * Because
+  * What
+  * Yoda
+  * Nugget
+  * Cool
+  * Madison
+
 ## v0.1.0
 
 * Implement the following FOAAS methods:
