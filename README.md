@@ -80,7 +80,7 @@ fuck.that('Alice')
 #### This
 
 ```ruby
-fuck.this(Alice')
+fuck.this('Alice')
 #=> { 'message' => 'Fuck this.', 'subtitle' => '- Alice' }
 ```
 
