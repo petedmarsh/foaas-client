@@ -62,7 +62,7 @@ fuck.fascinating('Alice')
 #### Life
 
 ```ruby
-fuck.donut('Alice')
+fuck.life('Alice')
 #=> { 'message' => 'Fuck my life.', 'subtitle' => '- Alice' }
 ```
 
