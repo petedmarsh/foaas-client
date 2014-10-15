@@ -66,7 +66,7 @@ fuck.donut('Alice')
 #### Pink
 
 ```ruby
-fuck.donut('Alice')
+fuck.pink('Alice')
 #=> { 'message' => 'Well, Fuck me pink.', 'subtitle' => '- Alice' }
 ```
 
