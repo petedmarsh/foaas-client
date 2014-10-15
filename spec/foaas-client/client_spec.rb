@@ -226,7 +226,7 @@ describe Foaas::Client do
 
 				let(:sym) { method }
 
-				it { should be_true }
+				it { should eq true }
 
 			end
 
@@ -234,7 +234,7 @@ describe Foaas::Client do
 
 				let(:sym) { :not_a_foaas_method }
 
-				it { should be_false }
+				it { should eq false }
 
 			end
 
