@@ -122,6 +122,13 @@ fuck.off('Bob', 'Alice')
 #=> { 'message' => 'Fuck off, Bob.', 'subtitle' => '- Alice' }
 ```
 
+### Outside
+
+```ruby
+fuck.outside('Bob', 'Alice')
+#=> { 'message' => 'Bob, why don\'t you go outside and play hide-and-go-fuck-yourself?', 'subtitle' => '- Alice' }
+```
+
 #### Shakespeare
 
 ```ruby
