@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## v0.2.0
 
 * Fix errors in README
 * Add support for XML response type
