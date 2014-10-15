@@ -38,6 +38,13 @@ fuck.off('Bob', 'Alice', :xml)
 
 ### Methods
 
+### Because
+
+```ruby
+fuck.because('Alice')
+#=> { 'message' => 'Why? Because Fuck you, that\'s why.', 'subtitle' => 'Alice' }
+```
+
 ### Cool
 
 ```ruby
