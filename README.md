@@ -38,6 +38,13 @@ fuck.off('Bob', 'Alice', :xml)
 
 ### Methods
 
+### Cool
+
+```ruby
+fuck.cool('Alice')
+#=> { 'message' => 'Cool story, Bro', '- Alice' }
+```
+
 #### Everyone
 
 ```ruby
