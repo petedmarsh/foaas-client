@@ -164,6 +164,13 @@ fuck.thanks('Bob', 'Alice')
 #=> { 'message' => 'Fuck you very much', 'subtitle' => '- Alice' }
 ```
 
+### Yoda
+
+```ruby
+fuck.yoda('Bob', 'Alice')
+#=> { 'message' => 'Fuck off, you must, Bob', 'subtitle' => '- Alice' }
+```
+
 #### You
 
 ```ruby

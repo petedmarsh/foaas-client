@@ -8,7 +8,7 @@ module Foaas
   	URL = Addressable::Template.new("http://foaas.com/{method}{/name}/{from}")
 
     METHODS_ONE_PARAM = [:this, :everything, :everyone, :pink, :life, :thanks, :flying, :fascinating, :cool]
-    METHODS_TWO_PARAMS = [:off, :you, :donut, :shakespeare, :linus, :king, :chainsaw, :outside, :madison, :nugget]
+    METHODS_TWO_PARAMS = [:off, :you, :donut, :shakespeare, :linus, :king, :chainsaw, :outside, :madison, :nugget, :yoda]
 
     def method_missing(sym, *args, &block)
         if METHODS_TWO_PARAMS.include? sym
