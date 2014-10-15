@@ -10,6 +10,87 @@ describe Foaas::Client do
 
 	let(:client) { Foaas::Client.new }
 
+	Foaas::Client::METHODS_THREE_PARAMS.each do |method|
+		describe "##{method}" do
+
+			before do
+				RestClient.should_receive(:get).with(url, { accept: accept }).and_return('{ "message" : "", "subtitle" : ""}')
+			end
+
+			let(:name) { 'name' }
+			let(:from) { 'from' }
+			let(:other) { 'other' }
+			let(:type) { nil }
+
+			let(:url) { "http://foaas.com/#{method}/#{name}/#{from}/#{other}" }
+
+			context 'type is' do
+
+				context 'not specified' do
+
+					let(:accept) { :json }
+
+					it 'defaults to JSON' do
+						client.send(method, name, from, other, type)
+					end
+
+				end
+
+				context 'is specified' do
+
+					context 'as HTML' do
+
+						let(:type) { :html }
+						let(:accept) { :html }
+
+						it 'specifies text/html as the accept type' do
+							client.send(method, name, from, other, type)
+						end
+					end
+
+					context 'as JSON' do
+
+						let(:type) { :json }
+						let(:accept) { :json}
+
+						it 'specifies application/json as the accept type' do
+							client.send(method, name, from, other, type)
+						end
+
+						it 'parses the response into a hash' do
+							client.send(method, name, from, other, type).should == { 'message' => '', 'subtitle' => ''}
+						end
+
+					end
+
+					context 'as text' do
+
+						let(:type) { :text }
+						let(:accept) { 'text/plain' }
+
+						it 'specifies text/plain as the accept type' do
+							client.send(method, name, from, other, type)
+						end
+					end
+
+					context 'as xml' do
+
+						let(:type) { :xml }
+						let(:accept) { :xml }
+
+						it 'specifies application/xml as the acccept type' do
+							client.send(method, name, from, other, type)
+						end
+					end
+
+				end
+
+			end
+			
+		end
+	end
+
+
 	Foaas::Client::METHODS_TWO_PARAMS.each do |method|
 		describe "##{method}" do
 

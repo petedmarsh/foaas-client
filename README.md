@@ -94,6 +94,13 @@ fuck.fascinating('Alice')
 #=> { 'message' => 'Fascinating story, in what chapter do you shut the fuck up?', 'subtitle' => '- Alice' }
 ```
 
+### Field
+
+```ruby
+fuck.field('Bob', 'Alice', 'Clara')
+#=> { 'message' => 'And Alice said on to Bob, "Verily, cast thine eyes upon the field in which I grow my fucks", and Bobgave witness onto the field, and saw that it was barren.', => '- Clara' }
+```
+
 #### King
 
 ```ruby
