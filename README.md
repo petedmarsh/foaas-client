@@ -45,6 +45,13 @@ fuck.because('Alice')
 #=> { 'message' => 'Why? Because Fuck you, that\'s why.', 'subtitle' => 'Alice' }
 ```
 
+### Can I use?
+
+```ruby
+fuck.caniuse('Bob', 'Alice')
+#=> { 'message' => 'Can you use Bob? Fuck no!', 'subtitle' => '- Alice' }
+```
+
 ### Cool
 
 ```ruby
