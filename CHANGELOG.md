@@ -3,6 +3,7 @@
 ## HEAD
 
 * Fix formatting errors in README (heading level for method names)
+* Add documentation for Flying method to README
 
 ## v0.2.0
 

@@ -108,6 +108,12 @@ fuck.field('Bob', 'Alice', 'Clara')
 #=> { 'message' => 'And Alice said on to Bob, "Verily, cast thine eyes upon the field in which I grow my fucks", and Bobgave witness onto the field, and saw that it was barren.', => '- Clara' }
 ```
 
+#### Flying
+
+```ruby
+fuck.flying('Alice')
+#=> { 'message' => 'I don\'t give a flying fuck.', 'subtitle' => '- Alice' }
+
 #### King
 
 ```ruby
