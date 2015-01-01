@@ -49,7 +49,7 @@ fuck.ballmer('Bob', 'Alice', 'Clara')
 
 ```ruby
 fuck.because('Alice')
-#=> { 'message' => 'Why? Because Fuck you, that\'s why.', 'subtitle' => 'Alice' }
+#=> { 'message' => 'Why? Because Fuck you, that\'s why.', 'subtitle' => '- Alice' }
 ```
 
 #### Bye
