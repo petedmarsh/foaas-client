@@ -226,6 +226,15 @@ fuck.this('Alice')
 #=> { 'message' => 'Fuck this.', 'subtitle' => '- Alice' }
 ```
 
+#### Version
+
+__Note:__ This is not an "insult" method, it returns the version of the service.
+
+```ruby
+fuck.version()
+#=> { 'message' => '0.1.0', 'subtitle' => 'FOAAS' }
+```
+
 #### What
 
 ```ruby

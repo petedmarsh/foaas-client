@@ -29,6 +29,10 @@ module Foaas
       METHODS_ONE_PARAM.include?(sym) or METHODS_TWO_PARAMS.include?(sym) or sym == :thing or super(sym, include_private)
     end
 
+    def version(type = nil)
+      make_request(URL.expand(method: :version), type)
+    end
+
   	private
 
   	def make_request(url, type)

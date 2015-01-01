@@ -10,6 +10,7 @@
   * Bus
   * Bye
   * Diabetes
+  * Version (__Note:__ this is not an insult, it returns the FOAAS version)
   * Xmas
 
 ## v0.2.0
