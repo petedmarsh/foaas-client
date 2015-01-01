@@ -2,6 +2,8 @@
 
 ## HEAD
 
+* Fix formatting errors in README (heading level for method names)
+
 ## v0.2.0
 
 * Fix errors in README

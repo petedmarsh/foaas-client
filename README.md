@@ -38,21 +38,21 @@ fuck.off('Bob', 'Alice', :xml)
 
 ### Methods
 
-### Ballmer
+#### Ballmer
 
 ```ruby
 fuck.ballmer('Bob', 'Alice', 'Clara')
 #=> { 'message' => 'Fucking Bob is a fucking pussy. I'm going to fucking bury that guy, I have done it before, and I will do it again. I'm going to fucking kill Alice.', 'subtitle' => 'Clara' }
 ```
 
-### Because
+#### Because
 
 ```ruby
 fuck.because('Alice')
 #=> { 'message' => 'Why? Because Fuck you, that\'s why.', 'subtitle' => 'Alice' }
 ```
 
-### Can I use?
+#### Can I use?
 
 ```ruby
 fuck.caniuse('Bob', 'Alice')
@@ -66,7 +66,7 @@ fuck.chainsaw('Bob', 'Alice')
 #=> { 'message' => 'Fuck me gently with a chainsaw, Bob. Do I look like Mother Teresa?', 'subtitle' => '- Alice' }
 ```
 
-### Cool
+#### Cool
 
 ```ruby
 fuck.cool('Alice')
@@ -101,7 +101,7 @@ fuck.fascinating('Alice')
 #=> { 'message' => 'Fascinating story, in what chapter do you shut the fuck up?', 'subtitle' => '- Alice' }
 ```
 
-### Field
+#### Field
 
 ```ruby
 fuck.field('Bob', 'Alice', 'Clara')
@@ -129,14 +129,14 @@ fuck.linus('Bob', 'Alice')
 #=> { 'message' => 'Bob, there aren't enough swear-words in the English language, so now I'll have to call you perkeleen vittupää just to express my disgust and frustration with this crap.', 'subtitle' => '- Alice' }
 ```
 
-### Madison
+#### Madison
 
 ```ruby
 fuck.madison('Bob', 'Alice')
 #=> { 'What you\'ve said is one of the most insantely idiotic things I have ever heard, Bob. At no point in your rambling, incoherent response were you even close to anything that could be considered a rational thought. Everyone in this room is now dumber for having listened to it. I award you no points Bob, and may God have mercy on your soul.', 'subtitle' => '- Alice' }
 ```
 
-### Nugget
+#### Nugget
 
 ```ruby
 fuck.nugget('Bob', 'Alice')
@@ -150,7 +150,7 @@ fuck.off('Bob', 'Alice')
 #=> { 'message' => 'Fuck off, Bob.', 'subtitle' => '- Alice' }
 ```
 
-### Outside
+#### Outside
 
 ```ruby
 fuck.outside('Bob', 'Alice')
@@ -199,14 +199,14 @@ fuck.this('Alice')
 #=> { 'message' => 'Fuck this.', 'subtitle' => '- Alice' }
 ```
 
-### What
+#### What
 
 ```ruby
 fuck.what('Alice')
 #=> { 'message' => 'What the fuck?!', 'subtitle' => '- Alice' }
 ```
 
-### Yoda
+#### Yoda
 
 ```ruby
 fuck.yoda('Bob', 'Alice')
