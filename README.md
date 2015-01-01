@@ -52,6 +52,13 @@ fuck.because('Alice')
 #=> { 'message' => 'Why? Because Fuck you, that\'s why.', 'subtitle' => 'Alice' }
 ```
 
+#### Bye
+
+```ruby
+fuck.bye('Alice')
+#=> { 'message' => 'Fuckity bye!', 'subtitle' => '- Alice' }
+```
+
 #### Can I use?
 
 ```ruby

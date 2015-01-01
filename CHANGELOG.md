@@ -5,6 +5,8 @@
 * Fix formatting errors in README (heading level for method names)
 * Add documentation for Flying method to README
 * Fix documentation for Field method (key missing for subtitle)
+* Implement the following FOAAS methods:
+  * Bye
 
 ## v0.2.0
 
