@@ -7,6 +7,7 @@
 * Fix documentation for Field method (key missing for subtitle)
 * Fix documentation for Because method (missing dash in subtitle value)
 * Implement the following FOAAS methods:
+  * Bus
   * Bye
   * Diabetes
 

@@ -52,6 +52,13 @@ fuck.because('Alice')
 #=> { 'message' => 'Why? Because Fuck you, that\'s why.', 'subtitle' => '- Alice' }
 ```
 
+#### Bus
+
+```ruby
+fuck.bus('Bob', 'Alice')
+#=> { 'message' => 'Christ on a bendy-bus, Bob, don\'t be such a fucking faff-arse', 'subtitle' => '- Alice' }
+```
+
 #### Bye
 
 ```ruby
