@@ -7,6 +7,7 @@
 * Fix documentation for Field method (key missing for subtitle)
 * Implement the following FOAAS methods:
   * Bye
+  * Diabetes
 
 ## v0.2.0
 

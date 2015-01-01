@@ -80,6 +80,13 @@ fuck.cool('Alice')
 #=> { 'message' => 'Cool story, Bro', '- Alice' }
 ```
 
+#### Diabetes
+
+```ruby
+fuck.diabetes('Alice')
+#=> { 'message' => 'I\'d love to stop and chat to you but I\'d rather have type 2 diabetes.', 'subtitle' => '- Alice' }
+```
+
 #### Donut
 
 ```ruby
