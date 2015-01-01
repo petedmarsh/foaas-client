@@ -10,6 +10,7 @@
   * Bus
   * Bye
   * Diabetes
+  * Xmas
 
 ## v0.2.0
 

@@ -233,6 +233,13 @@ fuck.what('Alice')
 #=> { 'message' => 'What the fuck?!', 'subtitle' => '- Alice' }
 ```
 
+#### Xmas
+
+```ruby
+fuck.xmas('Bob', 'Alice')
+#=> { 'message' => 'Merry Fucking Christmsa, Bob', 'subtitle' => '- Alice' }
+```
+
 #### Yoda
 
 ```ruby
