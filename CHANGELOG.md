@@ -6,6 +6,7 @@
 * Add documentation for Flying method to README
 * Fix documentation for Field method (key missing for subtitle)
 * Fix documentation for Because method (missing dash in subtitle value)
+* Alphabetise examples in Response Types section of README
 * Implement the following FOAAS methods:
   * Bus
   * Bye
