@@ -33,7 +33,7 @@ fuck.off('Bob', 'Alice', :html)
 #=> '<html>...</html>'
 
 fuck.off('Bob', 'Alice', :xml)
-#=> '<?xml version="1.0" encoding="utf-8"?>'
+#=> '<?xml version="1.0" encoding="utf-8"?>...'
 ```
 
 ### Methods
