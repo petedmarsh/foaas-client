@@ -7,6 +7,7 @@
 * Fix documentation for Field method (key missing for subtitle)
 * Fix documentation for Because method (missing dash in subtitle value)
 * Alphabetise examples in Response Types section of README
+* Update supported API version in README to `0.1.0`
 * Implement the following FOAAS methods:
   * Bus
   * Bye
