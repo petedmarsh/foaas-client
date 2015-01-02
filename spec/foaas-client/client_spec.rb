@@ -350,6 +350,19 @@ describe Foaas::Client do
 
   end
 
+  describe '#operations' do
+
+    let(:url) { "http://foaas.com/operations/" }
+    let(:accept) { :json }
+    let(:response) { '[]' }
+
+    it 'requests the operations from FOAAS' do
+      RestClient.should_receive(:get).with(url, { accept: accept }).and_return(response)
+      result = client.operations()
+      result.should eq JSON.parse(response)
+    end
+  end
+
   describe '#version' do
 
     before do

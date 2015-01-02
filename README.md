@@ -177,6 +177,16 @@ fuck.off('Bob', 'Alice')
 #=> { 'message' => 'Fuck off, Bob.', 'subtitle' => '- Alice' }
 ```
 
+#### Operations
+
+__Note:__ This is not an "insult" method, it returns the avialble "insult" operations. Additionally, this method only returns JSON.
+
+
+```ruby
+fuck.operations()
+#=> [ { 'name' => 'Ballmer', 'url' => '/ballmer/:name/:company/:from', 'fields' => [ { 'name' => 'Name', 'field' => 'name' }, { 'name' => 'Company', 'field' => 'company' }, { 'name' => 'From', 'field' => 'field'} ] }, ...]
+```
+
 #### Outside
 
 ```ruby

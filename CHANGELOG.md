@@ -10,6 +10,7 @@
   * Bus
   * Bye
   * Diabetes
+  * Operations (__Note:__ this is not an insult, it returns the avaialable methods)
   * Version (__Note:__ this is not an insult, it returns the FOAAS version)
   * Xmas
 

@@ -25,6 +25,10 @@ module Foaas
         end
     end
 
+    def operations
+      make_request(URL.expand(method: :operations), :json)
+    end
+
     def respond_to?(sym, include_private = false)
       METHODS_ONE_PARAM.include?(sym) or METHODS_TWO_PARAMS.include?(sym) or sym == :thing or super(sym, include_private)
     end
