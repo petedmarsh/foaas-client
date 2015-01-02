@@ -34,6 +34,11 @@ describe Foaas::Client do
             client.send(method, name, from, other, type)
           end
 
+
+          it 'parses the response into a hash' do
+            client.send(method, name, from, other, type).should == { 'message' => '', 'subtitle' => ''}
+          end
+
         end
 
         context 'is specified' do
@@ -55,10 +60,6 @@ describe Foaas::Client do
 
             it 'specifies application/json as the accept type' do
               client.send(method, name, from, other, type)
-            end
-
-            it 'parses the response into a hash' do
-              client.send(method, name, from, other, type).should == { 'message' => '', 'subtitle' => ''}
             end
 
           end
@@ -114,6 +115,10 @@ describe Foaas::Client do
             client.send(method, name, from, type)
           end
 
+          it 'parses the response into a hash' do
+            client.send(method, name, from, type).should == { 'message' => '', 'subtitle' => ''}
+          end
+
         end
 
         context 'is specified' do
@@ -135,10 +140,6 @@ describe Foaas::Client do
 
             it 'specifies application/json as the accept type' do
               client.send(method, name, from, type)
-            end
-
-            it 'parses the response into a hash' do
-              client.send(method, name, from, type).should == { 'message' => '', 'subtitle' => ''}
             end
 
           end
@@ -192,6 +193,10 @@ describe Foaas::Client do
             client.send(method, from, type)
           end
 
+          it 'parses the response into a hash' do
+            client.send(method, from, type).should == { 'message' => '', 'subtitle' => ''}
+          end
+
         end
 
         context 'is specified' do
@@ -213,10 +218,6 @@ describe Foaas::Client do
 
             it 'specifies application/json as the accept type' do
               client.send(method, from, type)
-            end
-
-            it 'parses the response into a hash' do
-              client.send(method, from, type).should == { 'message' => '', 'subtitle' => ''}
             end
 
           end
@@ -266,6 +267,11 @@ describe Foaas::Client do
         it 'defaults to JSON' do
           client.thing(thing, from, type)
         end
+
+        it 'parses the response into a hash' do
+          client.thing(thing, from, type).should == { 'message' => '', 'subtitle' => ''}
+        end
+
       end
 
       context 'is specified' do
@@ -289,10 +295,6 @@ describe Foaas::Client do
             client.thing(thing, from, type)
           end
 
-          it 'parses the response into a hash' do
-            client.thing(thing, from, type).should == { 'message' => '', 'subtitle' => ''}
-          end
-          
         end
 
         context 'as text' do
@@ -382,6 +384,11 @@ describe Foaas::Client do
         it 'defaults to JSON' do
           client.version()
         end
+
+        it 'parses the response into a hash' do
+          client.version().should == { 'message' => '', 'subtitle' => ''}
+        end
+
       end
 
       context 'is specified' do
@@ -405,10 +412,6 @@ describe Foaas::Client do
             client.version(type)
           end
 
-          it 'parses the response into a hash' do
-            client.version(type).should == { 'message' => '', 'subtitle' => ''}
-          end
-          
         end
 
         context 'as text' do

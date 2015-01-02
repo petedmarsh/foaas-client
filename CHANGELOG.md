@@ -13,6 +13,35 @@
   * Operations (__Note:__ this is not an insult, it returns the avaialable methods)
   * Version (__Note:__ this is not an insult, it returns the FOAAS version)
   * Xmas
+* Previously if the type was explicitly given as `:json` the reponse from FOAAS would
+  be parsed and returned as a Hash. Now, if no type is specified a request is made to
+  FOAAS with `accept/json` as the Accept-Type and the result **is** parsed and returned
+  as a Hash but if type __is__ specified as `:json` then the raw JSON will be returned.
+  This makes the responses for the various return types consistent. Example:
+
+  ```ruby
+  # Previous behaviour:
+
+  fuck.because('Alice')
+  #=> { 'message' => '...', ... }
+
+  fuck.because('Alice', :json)
+  #=> { 'message' => '...', ... }
+
+  fuck.because('Alice', :xml)
+  #=> '<?xml version="1.0" encoding="UTF-8"?>...'
+
+  # New behaviour:
+
+  fuck.because('Alice')
+  #=> { 'message' => '...', ... }
+
+  fuck.because('Alice', :json)
+  #=> '{ "message": "...", ... }'
+
+  fuck.because('Alice', :xml)
+  #=> '<?xml version="1.0" encoding="UTF-8"?>...'
+  ```
 
 ## v0.2.0
 

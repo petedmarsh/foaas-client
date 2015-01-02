@@ -26,7 +26,7 @@ module Foaas
     end
 
     def operations
-      make_request(URL.expand(method: :operations), :json)
+      make_request(URL.expand(method: :operations), nil)
     end
 
     def respond_to?(sym, include_private = false)
@@ -40,10 +40,16 @@ module Foaas
   	private
 
   	def make_request(url, type)
-      type = :json unless type
-  		type = 'text/plain' if type == :text
-      response = RestClient.get url.to_s, { accept: type }
-      response = JSON.parse(response) if type == :json
+      accept_type = case type
+        when nil
+          :json
+        when :text
+          'text/plain'
+        else
+          type
+      end
+      response = RestClient.get url.to_s, { accept: accept_type }
+      response = JSON.parse(response) if type.nil?
       response
   	end
   	
