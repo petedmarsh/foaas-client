@@ -64,6 +64,18 @@ describe Foaas::Client do
 
           end
 
+          context 'as JSONP' do
+
+            let(:url) { "http://foaas.com/#{method}/#{name}/#{from}/#{other}?callback=fuck" }
+            let(:type) { :jsonp }
+            let(:accept) { :json}
+
+            it 'specifies application/json as the accept type' do
+              client.send(method, name, from, other, type)
+            end
+
+          end
+
           context 'as text' do
 
             let(:type) { :text }
@@ -136,6 +148,18 @@ describe Foaas::Client do
           context 'as JSON' do
 
             let(:type) { :json }
+            let(:accept) { :json}
+
+            it 'specifies application/json as the accept type' do
+              client.send(method, name, from, type)
+            end
+
+          end
+
+          context 'as JSONP' do
+
+            let(:url) { "http://foaas.com/#{method}/#{name}/#{from}?callback=fuck" }
+            let(:type) { :jsonp }
             let(:accept) { :json}
 
             it 'specifies application/json as the accept type' do
@@ -222,6 +246,18 @@ describe Foaas::Client do
 
           end
 
+          context 'as JSONP' do
+
+            let(:url) { "http://foaas.com/#{method}/#{from}?callback=fuck" }
+            let(:type) { :jsonp }
+            let(:accept) { :json}
+
+            it 'specifies application/json as the accept type' do
+              client.send(method, from, type)
+            end
+
+          end
+
           context 'as text' do
 
             let(:type) { :text }
@@ -290,6 +326,18 @@ describe Foaas::Client do
 
           let(:type) { :json }
           let(:accept) { :json }
+
+          it 'specifies application/json as the accept type' do
+            client.thing(thing, from, type)
+          end
+
+        end
+
+        context 'as JSONP' do
+
+          let(:url) { "http://foaas.com/#{thing}/#{from}?callback=fuck" }
+          let(:type) { :jsonp }
+          let(:accept) { :json}
 
           it 'specifies application/json as the accept type' do
             client.thing(thing, from, type)
@@ -407,6 +455,18 @@ describe Foaas::Client do
 
           let(:type) { :json }
           let(:accept) { :json }
+
+          it 'specifies application/json as the accept type' do
+            client.version(type)
+          end
+
+        end
+
+        context 'as JSONP' do
+
+          let(:url) { "http://foaas.com/#{version}/?callback=fuck" }
+          let(:type) { :jsonp }
+          let(:accept) { :json}
 
           it 'specifies application/json as the accept type' do
             client.version(type)

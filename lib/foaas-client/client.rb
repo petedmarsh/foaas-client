@@ -40,15 +40,19 @@ module Foaas
   	private
 
   	def make_request(url, type)
+      url = url.to_s
       accept_type = case type
         when nil
           :json
         when :text
           'text/plain'
+        when :jsonp
+          url += '?callback=fuck'
+          :json
         else
           type
       end
-      response = RestClient.get url.to_s, { accept: accept_type }
+      response = RestClient.get url, { accept: accept_type }
       response = JSON.parse(response) if type.nil?
       response
   	end

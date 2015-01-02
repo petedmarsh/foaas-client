@@ -13,6 +13,7 @@
   * Operations (__Note:__ this is not an insult, it returns the avaialable methods)
   * Version (__Note:__ this is not an insult, it returns the FOAAS version)
   * Xmas
+* Add support for JSONP response type
 * Previously if the type was explicitly given as `:json` the reponse from FOAAS would
   be parsed and returned as a Hash. Now, if no type is specified a request is made to
   FOAAS with `accept/json` as the Accept-Type and the result **is** parsed and returned
