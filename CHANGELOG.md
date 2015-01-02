@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## v1.0.0
 
 * Fix formatting errors in README (heading level for method names)
 * Add documentation for Flying method to README
