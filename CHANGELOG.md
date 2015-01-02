@@ -2,6 +2,8 @@
 
 ## HEAD
 
+* Fix example for JSONP response type (typo: `\` instead of `"`)
+
 ## v1.0.0
 
 * Fix formatting errors in README (heading level for method names)

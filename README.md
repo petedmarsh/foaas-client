@@ -30,7 +30,7 @@ fuck.off('Bob', 'Alice', :json)
 #=> '{ "message": "Fuck off, Bob.", "subtitle": "- Alice" }'
 
 fuck.off('Bob', 'Alice', :jsonp)
-#=> 'fuck && fuck({ "message": "Fuck off, Bob.", "subtitle": "- Alice\ });'
+#=> 'fuck && fuck({ "message": "Fuck off, Bob.", "subtitle": "- Alice" });'
 
 fuck.off('Bob', 'Alice', :text)
 #=> 'Fuck off, Bob. - Alice'
