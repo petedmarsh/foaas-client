@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## v1.1.0
 
 * Fix example for JSONP response type (typo: `\` instead of `"`)
 * Implement the following FOAAS methods:
