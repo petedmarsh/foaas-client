@@ -3,6 +3,8 @@
 ## HEAD
 
 * Fix example for JSONP response type (typo: `\` instead of `"`)
+* Implement the following FOAAS methods:
+  * Awesome
 
 ## v1.0.0
 

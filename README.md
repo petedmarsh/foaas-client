@@ -41,6 +41,13 @@ fuck.off('Bob', 'Alice', :xml)
 
 ### Methods
 
+### Awesome
+
+```ruby
+fuck.awesome('Alice')
+#=> { 'message' => 'This is Fucking Awesome.', subtitle => '- Alice' }
+```
+
 #### Ballmer
 
 ```ruby
