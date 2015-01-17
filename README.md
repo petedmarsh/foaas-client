@@ -52,7 +52,7 @@ fuck.awesome('Alice')
 
 ```ruby
 fuck.ballmer('Bob', 'Alice', 'Clara')
-#=> { 'message' => 'Fucking Bob is a fucking pussy. I'm going to fucking bury that guy, I have done it before, and I will do it again. I'm going to fucking kill Alice.', 'subtitle' => 'Clara' }
+#=> { 'message' => 'Fucking Bob is a fucking pussy. I'm going to fucking bury that guy, I have done it before, and I will do it again. I'm going to fucking kill Alice.', 'subtitle' => '- Clara' }
 ```
 
 #### Because
@@ -135,7 +135,7 @@ fuck.fascinating('Alice')
 #### Field
 
 ```ruby
-fuck.field('Bob', 'Alice', 'Clara')
+fuck.field('Alicew', 'Bob', 'Clara')
 #=> { 'message' => 'And Alice said on to Bob, "Verily, cast thine eyes upon the field in which I grow my fucks", and Bobgave witness onto the field, and saw that it was barren.', 'subtitle' => '- Clara' }
 ```
 

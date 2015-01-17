@@ -5,6 +5,8 @@
 * Fix example for JSONP response type (typo: `\` instead of `"`)
 * Implement the following FOAAS methods:
   * Awesome
+* Fix example for Ballmer method in README (subtile was missing '- ' prefix)
+* Fix example for Field method in README (parameters incorrectly ordered)
 
 ## v1.0.0
 
