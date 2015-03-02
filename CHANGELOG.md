@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## v1.2.0
 
 * Implement the following FOAAS methods:
   * Dalton

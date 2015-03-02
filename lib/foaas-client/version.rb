@@ -1,3 +1,3 @@
 module Foaas
-  VERSION = '1.2.0dev'
+  VERSION = '1.2.0'
 end
