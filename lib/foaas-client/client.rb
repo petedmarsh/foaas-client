@@ -40,6 +40,7 @@ module Foaas
   	private
 
   	def make_request(url, type)
+      query_params = {}
       url = url.to_s
       accept_type = case type
         when nil
@@ -47,11 +48,16 @@ module Foaas
         when :text
           'text/plain'
         when :jsonp
-          url += '?callback=fuck'
+          query_params['callback'] = 'fuck' 
           :json
         else
           type
       end
+
+      if not query_params.empty?
+        url += '?' + query_params.map{|k,v| "#{k}=#{v}"}.join('&')
+      end
+
       response = RestClient.get url, { accept: accept_type }
       response = JSON.parse(response) if type.nil?
       response
