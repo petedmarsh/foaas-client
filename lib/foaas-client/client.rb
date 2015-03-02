@@ -11,7 +11,9 @@ module Foaas
     METHODS_TWO_PARAMS = [:bus, :donut, :caniuse, :chainsaw, :dalton, :king, :linus, :madison, :nugget, :off, :outside, :shakespeare, :you, :xmas, :yoda]
     METHODS_THREE_PARAMS = [:ballmer, :field]
 
-    def method_missing(sym, *args, **kwargs, &block)
+    def method_missing(sym, *args, &block)
+        kwargs = {}
+        kwargs = args[-1] if args[-1].class == Hash
         if METHODS_TWO_PARAMS.include? sym
           make_request(URL.expand(method: sym, name: args[0], from: args[1]), args[2], i18n=kwargs[:i18n], shoutcloud=kwargs[:shoutcloud])
         elsif  METHODS_ONE_PARAM.include? sym
@@ -21,7 +23,7 @@ module Foaas
         elsif sym == :thing
           make_request(URL.expand(method: args[0], from: args[1]), args[2], i18n=kwargs[:i18n], shoutcloud=kwargs[:shoutcloud])
         else
-          super(sym, *args, **kwargs, &block)
+          super(sym, *args, &block)
         end
     end
 
