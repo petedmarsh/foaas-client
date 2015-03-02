@@ -2,6 +2,9 @@
 
 ## HEAD
 
+* Implement the following FOAAS methods:
+  * Dalton
+
 ## v1.1.0
 
 * Fix example for JSONP response type (typo: `\` instead of `"`)

@@ -97,6 +97,13 @@ fuck.cool('Alice')
 #=> { 'message' => 'Cool story, Bro', '- Alice' }
 ```
 
+### Dalton
+
+```ruby
+fuck.dalton('Bob', 'Alice')
+#=> { 'msessage' => 'Bob: A fucking problem solving super-hero', 'subtitle' => '- Alice' }
+```
+
 #### Diabetes
 
 ```ruby
