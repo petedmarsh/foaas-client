@@ -13,13 +13,13 @@ module Foaas
 
     def method_missing(sym, *args, **kwargs, &block)
         if METHODS_TWO_PARAMS.include? sym
-          make_request(URL.expand(method: sym, name: args[0], from: args[1]), args[2], i18n=kwargs[:i18n])
+          make_request(URL.expand(method: sym, name: args[0], from: args[1]), args[2], i18n=kwargs[:i18n], shoutcloud=kwargs[:shoutcloud])
         elsif  METHODS_ONE_PARAM.include? sym
-          make_request(URL.expand(method: sym, from: args[0]), args[1], i18n=kwargs[:i18n])
+          make_request(URL.expand(method: sym, from: args[0]), args[1], i18n=kwargs[:i18n], shoutcloud=kwargs[:shoutcloud])
         elsif METHODS_THREE_PARAMS.include? sym
-          make_request(URL.expand(method: sym, name: args[0], from: args[1], other: args[2]), args[3], i18n=kwargs[:i18n])
+          make_request(URL.expand(method: sym, name: args[0], from: args[1], other: args[2]), args[3], i18n=kwargs[:i18n], shoutcloud=kwargs[:shoutcloud])
         elsif sym == :thing
-          make_request(URL.expand(method: args[0], from: args[1]), args[2], i18n=kwargs[:i18n])
+          make_request(URL.expand(method: args[0], from: args[1]), args[2], i18n=kwargs[:i18n], shoutcloud=kwargs[:shoutcloud])
         else
           super(sym, *args, **kwargs, &block)
         end
@@ -39,7 +39,7 @@ module Foaas
 
   	private
 
-  	def make_request(url, type, i18n=nil)
+  	def make_request(url, type, i18n=nil, shoutcloud=false)
       query_params = {}
       url = url.to_s
       accept_type = case type
@@ -58,8 +58,18 @@ module Foaas
         query_params['i18n'] = i18n
       end
 
+      if shoutcloud
+        query_params['shoutcloud'] = nil
+      end
+
       if not query_params.empty?
-        url += '?' + query_params.map{|k,v| "#{k}=#{v}"}.join('&')
+        url += '?' + query_params.map do |k,v|
+          if v
+            "#{k}=#{v}"
+          else
+            k.to_s
+          end
+        end.join('&')
       end
 
       response = RestClient.get url, { accept: accept_type }

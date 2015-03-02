@@ -6,6 +6,7 @@
   * Dalton
 * Refactor the way the JSONP callback parameter is added to the FOAAS url
 * Add support for i18n parameter
+* Add support for shoutcloud parameter
 
 ## v1.1.0
 

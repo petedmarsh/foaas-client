@@ -46,6 +46,13 @@ fuck.off('Bob', 'Alice', :xml)
 #=> '<?xml version="1.0" encoding="utf-8"?>...'
 ```
 
+### Shoutcloud
+
+```ruby
+fuck.off('Bob', 'Alice', shoutcloud: true)
+#=> { 'message': 'FUCK OFF, BOB', 'subtitle': '- ALICE' }
+```
+
 ### Methods
 
 ### Awesome

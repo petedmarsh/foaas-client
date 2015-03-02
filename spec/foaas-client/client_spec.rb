@@ -35,6 +35,17 @@ describe Foaas::Client do
         end
       end
 
+      context 'shoutcloud specified' do
+        let(:accept) { :json }
+        let(:shoutcloud) { true }
+
+        let(:url) { "http://foaas.com/#{method}/#{name}/#{from}/#{other}?shoutcloud" }
+
+        it 'sets the shoutcloud parameter on the url' do
+          client.send(method, name, from, other, type, shoutcloud: true)
+        end
+      end
+
       context 'type is' do
 
         context 'not specified' do
@@ -139,6 +150,17 @@ describe Foaas::Client do
         end
       end
 
+      context 'shoutcloud specified' do
+        let(:accept) { :json }
+        let(:shoutcloud) { true }
+
+        let(:url) { "http://foaas.com/#{method}/#{name}/#{from}?shoutcloud" }
+
+        it 'sets the shoutcloud parameter on the url' do
+          client.send(method, name, from, type, shoutcloud: true)
+        end
+      end
+
       context 'type is' do
 
         context 'not specified' do
@@ -240,6 +262,17 @@ describe Foaas::Client do
         end
       end
 
+      context 'shoutcloud specified' do
+        let(:accept) { :json }
+        let(:shoutcloud) { true }
+
+        let(:url) { "http://foaas.com/#{method}/#{from}?shoutcloud" }
+
+        it 'sets the shoutcloud parameter on the url' do
+          client.send(method, from, type, shoutcloud: true)
+        end
+      end
+
       context 'type is' do
 
         context 'not specified' do
@@ -337,6 +370,18 @@ describe Foaas::Client do
           client.thing(thing, from, type, i18n: i18n)
         end
       end
+
+
+    context 'shoutcloud specified' do
+        let(:accept) { :json }
+        let(:shoutcloud) { true }
+
+        let(:url) { "http://foaas.com/#{thing}/#{from}?shoutcloud" }
+
+        it 'sets the shoutcloud parameter on the url' do
+          client.thing(thing, from, type, shoutcloud: true)
+        end
+    end
 
     context 'type is' do
 
