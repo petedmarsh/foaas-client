@@ -11,17 +11,17 @@ module Foaas
     METHODS_TWO_PARAMS = [:bus, :donut, :caniuse, :chainsaw, :dalton, :king, :linus, :madison, :nugget, :off, :outside, :shakespeare, :you, :xmas, :yoda]
     METHODS_THREE_PARAMS = [:ballmer, :field]
 
-    def method_missing(sym, *args, &block)
+    def method_missing(sym, *args, **kwargs, &block)
         if METHODS_TWO_PARAMS.include? sym
-          make_request(URL.expand(method: sym, name: args[0], from: args[1]), args[2])
+          make_request(URL.expand(method: sym, name: args[0], from: args[1]), args[2], i18n=kwargs[:i18n])
         elsif  METHODS_ONE_PARAM.include? sym
-          make_request(URL.expand(method: sym, from: args[0]), args[1])
+          make_request(URL.expand(method: sym, from: args[0]), args[1], i18n=kwargs[:i18n])
         elsif METHODS_THREE_PARAMS.include? sym
-          make_request(URL.expand(method: sym, name: args[0], from: args[1], other: args[2]), args[3])
+          make_request(URL.expand(method: sym, name: args[0], from: args[1], other: args[2]), args[3], i18n=kwargs[:i18n])
         elsif sym == :thing
-          make_request(URL.expand(method: args[0], from: args[1]), args[2])
+          make_request(URL.expand(method: args[0], from: args[1]), args[2], i18n=kwargs[:i18n])
         else
-          super(sym, *args, &block)
+          super(sym, *args, **kwargs, &block)
         end
     end
 
@@ -39,7 +39,7 @@ module Foaas
 
   	private
 
-  	def make_request(url, type)
+  	def make_request(url, type, i18n=nil)
       query_params = {}
       url = url.to_s
       accept_type = case type
@@ -52,6 +52,10 @@ module Foaas
           :json
         else
           type
+      end
+
+      if i18n
+        query_params['i18n'] = i18n
       end
 
       if not query_params.empty?

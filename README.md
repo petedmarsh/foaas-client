@@ -20,6 +20,13 @@ fuck = Foaas::Client.new
 fuck.off('Bob', 'Alice')
 ```
 
+### i18n
+
+```ruby
+fuck.off('Bob', 'Alice', i18n: :es)
+#=> { 'message': 'Vete a la mierda, Bob.', 'subtitle': '-Alice' }
+```
+
 ### Response Types
 
 ```ruby

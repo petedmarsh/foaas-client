@@ -5,6 +5,7 @@
 * Implement the following FOAAS methods:
   * Dalton
 * Refactor the way the JSONP callback parameter is added to the FOAAS url
+* Add support for i18n parameter
 
 ## v1.1.0
 

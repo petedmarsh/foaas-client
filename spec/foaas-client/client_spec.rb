@@ -24,6 +24,17 @@ describe Foaas::Client do
 
       let(:url) { "http://foaas.com/#{method}/#{name}/#{from}/#{other}" }
 
+      context 'i18n specified' do
+        let(:accept) { :json }
+        let(:i18n) { 'es' }
+
+        let(:url) { "http://foaas.com/#{method}/#{name}/#{from}/#{other}?i18n=es" }
+
+        it 'sets the i18n parameter on the url' do
+          client.send(method, name, from, other, type, i18n: i18n)
+        end
+      end
+
       context 'type is' do
 
         context 'not specified' do
@@ -117,6 +128,17 @@ describe Foaas::Client do
 
       let(:url) { "http://foaas.com/#{method}/#{name}/#{from}" }
 
+      context 'i18n specified' do
+        let(:accept) { :json }
+        let(:i18n) { 'es' }
+
+        let(:url) { "http://foaas.com/#{method}/#{name}/#{from}?i18n=es" }
+
+        it 'sets the i18n parameter on the url' do
+          client.send(method, name, from, type, i18n: i18n)
+        end
+      end
+
       context 'type is' do
 
         context 'not specified' do
@@ -207,6 +229,17 @@ describe Foaas::Client do
       let(:from) { 'from' }
       let(:type) { nil }
 
+      context 'i18n specified' do
+        let(:accept) { :json }
+        let(:i18n) { 'es' }
+
+        let(:url) { "http://foaas.com/#{method}/#{from}?i18n=es" }
+
+        it 'sets the i18n parameter on the url' do
+          client.send(method, from, type, i18n: i18n)
+        end
+      end
+
       context 'type is' do
 
         context 'not specified' do
@@ -293,6 +326,17 @@ describe Foaas::Client do
     let(:thing) { 'thing' }
     let(:from) { 'from' }
     let(:type) { nil }
+
+    context 'i18n specified' do
+        let(:accept) { :json }
+        let(:i18n) { 'es' }
+
+        let(:url) { "http://foaas.com/#{thing}/#{from}?i18n=es" }
+
+        it 'sets the i18n parameter on the url' do
+          client.thing(thing, from, type, i18n: i18n)
+        end
+      end
 
     context 'type is' do
 
