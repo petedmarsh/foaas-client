@@ -1,5 +1,7 @@
 # Changelog
 
+## HEAD
+
 ## v1.3.0
 
 * Implement the following FOAAS methods:
