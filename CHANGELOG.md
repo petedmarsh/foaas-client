@@ -3,6 +3,7 @@
 ## HEAD
 
 * Implement the following FOAAS methods:
+  * Bucket
   * Tucker
 
 ## v1.2.0
