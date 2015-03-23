@@ -2,6 +2,9 @@
 
 ## HEAD
 
+* Implement the following FOAAS methods:
+  * Tucker
+
 ## v1.2.0
 
 * Implement the following FOAAS methods:

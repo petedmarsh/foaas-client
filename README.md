@@ -267,6 +267,13 @@ fuck.this('Alice')
 #=> { 'message' => 'Fuck this.', 'subtitle' => '- Alice' }
 ```
 
+#### Tucker
+
+```ruby
+fuck.tucker('Alice')
+#=> { 'message' => 'Come the fuck in or fuck the fuck off.', 'subtitle' => '- Alice' }
+```
+
 #### Version
 
 __Note:__ This is not an "insult" method, it returns the version of the service.
