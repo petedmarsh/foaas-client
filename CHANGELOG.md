@@ -2,6 +2,9 @@
 
 ## HEAD
 
+* Implement the following FOAAS methods:
+  * Zayn
+
 ## v1.3.0
 
 * Implement the following FOAAS methods:

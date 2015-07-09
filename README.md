@@ -317,3 +317,10 @@ fuck.yoda('Bob', 'Alice')
 fuck.you('Bob', 'Alice')
 #=> { 'message' => 'Fuck you, Bob.', 'subtitle' => '- Alice' }
 ```
+
+#### Zayn
+
+```ruby
+fuck.zayn('Alice')
+#=> { 'message' => ''Ask me if I give a motherfuck ?!!', 'subtitle' => '- Alice' }
+```
