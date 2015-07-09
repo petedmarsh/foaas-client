@@ -246,6 +246,13 @@ fuck.shakespeare('Bob', 'Alice')
 #=> { 'message' => 'Thou clay-brained guts, thou knotty-pated fool, thou whoreson obscene greasy tallow-catch!', 'subtitle' => '- Alice' }
 ```
 
+#### Shutup
+
+```ruby
+fuck.shutup('Bob', 'Alice')
+#=> { 'messasge' => 'Bob, shut the fuck up.', 'subtitle' => '- Alice' }
+```
+
 #### Thanks
 
 ```ruby

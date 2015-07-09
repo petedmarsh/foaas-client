@@ -3,6 +3,7 @@
 ## HEAD
 
 * Implement the following FOAAS methods:
+  * Shutup
   * Zayn
 
 ## v1.3.0
