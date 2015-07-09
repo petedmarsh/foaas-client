@@ -7,7 +7,7 @@ A client for [FOAAS](http://foaas.com).
 
 ## API Version
 
-Version `0.1.5` of the FOAAS API is supported.
+Version `0.1.7` of the FOAAS API is supported.
 
 ## Usage
 
