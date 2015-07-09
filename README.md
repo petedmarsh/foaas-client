@@ -153,6 +153,13 @@ fuck.everything('Alice')
 #=> { 'message' => 'Fuck everything.', 'subtitle' => '- Alice' }
 ```
 
+#### Family
+
+```ruby
+fuck.family('Alice')
+#=> { 'message' => 'Fuck you, your whole family, your pets, and your feces', 'subtitle' => '- Alice'}
+```
+
 #### Fascinating
 
 ```ruby

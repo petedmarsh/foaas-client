@@ -3,6 +3,7 @@
 ## HEAD
 
 * Implement the following FOAAS methods:
+  * Family
   * Shutup
   * Zayn
 
