@@ -139,6 +139,13 @@ fuck.donut('Bob', 'Alice')
 #=> { 'message' => 'Bob, go and take a flying fuck at a rolling donut.', 'subtitle' => '- Alice' }
 ```
 
+#### Do something
+
+```ruby
+fuck.dosomething('Write', 'Code', 'Alice')
+#=> { 'message' => ' 'Write the fucking code!', 'subtitle' => '- Alice' }
+```
+
 #### Everyone
 
 ```ruby

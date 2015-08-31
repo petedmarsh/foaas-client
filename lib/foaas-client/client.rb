@@ -9,7 +9,7 @@ module Foaas
 
     METHODS_ONE_PARAM = [:awesome, :because, :bucket, :bye, :cool, :diabetes, :everyone, :everything, :family, :fascinating, :flying, :life, :pink, :thanks, :this, :tucker, :what, :zayn]
     METHODS_TWO_PARAMS = [:bus, :caniuse, :chainsaw, :dalton, :donut, :king, :linus, :madison, :nugget, :off, :outside, :shakespeare, :shutup, :you, :xmas, :yoda]
-    METHODS_THREE_PARAMS = [:ballmer, :field]
+    METHODS_THREE_PARAMS = [:ballmer, :dosomething, :field]
 
     def method_missing(sym, *args, &block)
         kwargs = {}

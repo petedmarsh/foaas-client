@@ -2,6 +2,9 @@
 
 ## HEAD
 
+* Implement the following FOAAS methods:
+  * Do something
+
 ## v1.4.0
 
 * Implement the following FOAAS methods:
