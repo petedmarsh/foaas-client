@@ -177,7 +177,7 @@ fuck.fascinating('Alice')
 #### Field
 
 ```ruby
-fuck.field('Alicew', 'Bob', 'Clara')
+fuck.field('Alice', 'Bob', 'Clara')
 #=> { 'message' => 'And Alice said on to Bob, "Verily, cast thine eyes upon the field in which I grow my fucks", and Bobgave witness onto the field, and saw that it was barren.', 'subtitle' => '- Clara' }
 ```
 
