@@ -5,6 +5,7 @@
 * Implement the following FOAAS methods:
   * Do something
   * Retard
+  * Thumbs
 
 ## v1.4.0
 

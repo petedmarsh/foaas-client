@@ -309,6 +309,13 @@ fuck.tucker('Alice')
 #=> { 'message' => 'Come the fuck in or fuck the fuck off.', 'subtitle' => '- Alice' }
 ```
 
+#### Thumbs
+
+```ruby
+fuck.thumbs('Alice')
+#=> { 'message' => 'Who has two thumbs and doesn't give a fuck? Alice.', 'subtitle' => '- Alice' }
+```
+
 #### Version
 
 __Note:__ This is not an "insult" method, it returns the version of the service.
