@@ -253,6 +253,13 @@ fuck.pink('Alice')
 #=> { 'message' => 'Well, Fuck me pink.', 'subtitle' => '- Alice' }
 ```
 
+#### Retard
+
+```ruby
+fuck.retard('Alice')
+#=> { 'message' => 'You Fucktard!', 'subtitle' => '- Alice' }
+```
+
 #### Shakespeare
 
 ```ruby

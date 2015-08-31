@@ -4,6 +4,7 @@
 
 * Implement the following FOAAS methods:
   * Do something
+  * Retard
 
 ## v1.4.0
 
