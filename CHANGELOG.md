@@ -22,6 +22,7 @@
   * Single
   * Think
   * Zero
+* Fix shoutcloud example in README (wrong Hash syntax)
 
 ## v1.5.0
 

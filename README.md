@@ -50,7 +50,7 @@ fuck.off('Bob', 'Alice', :xml)
 
 ```ruby
 fuck.off('Bob', 'Alice', shoutcloud: true)
-#=> { 'message': 'FUCK OFF, BOB', 'subtitle': '- ALICE' }
+#=> { 'message' => 'FUCK OFF, BOB', 'subtitle' => '- ALICE' }
 ```
 
 ### Methods
