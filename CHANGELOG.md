@@ -8,6 +8,7 @@
   * Gfy
   * Greed
   * Keep calm
+  * Me
   * Mornin
 
 ## v1.5.0
