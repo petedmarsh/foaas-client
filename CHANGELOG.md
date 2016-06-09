@@ -5,6 +5,7 @@
 * Implement the following FOAAS methods:
   * Bday
   * Keep calm
+  * Mornin
 
 ## v1.5.0
 
