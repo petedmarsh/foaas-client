@@ -201,6 +201,13 @@ fuck.field('Alice', 'Bob', 'Clara')
 fuck.flying('Alice')
 #=> { 'message' => 'I don\'t give a flying fuck.', 'subtitle' => '- Alice' }
 
+#### Gfy
+
+```ruby
+fuck.gfy('Bob', 'Alice')
+#=> { 'message' => 'Golf foxtrot yankee, Bob.', 'subtilte' => '- Alice' }
+```
+
 #### Greed
 
 ```ruby
