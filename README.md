@@ -194,6 +194,13 @@ fuck.field('Alice', 'Bob', 'Clara')
 fuck.flying('Alice')
 #=> { 'message' => 'I don\'t give a flying fuck.', 'subtitle' => '- Alice' }
 
+#### Greed
+
+```ruby
+fuck.greed('greed', 'Alice')
+#=> { 'message' => 'The point is, ladies and gentleman, that greed -- for lack of a better word -- is good. :noun is right. greed works. greed clarifies, cuts through, and captures the essence of the evolutionary spirit. greed, in all of its forms -- greed for life, for money, for love, knowledge -- has marked the upward surge of mankind', 'subtitle' => '- Alice'}
+```
+
 #### Keep calm
 
 ```ruby
