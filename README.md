@@ -483,7 +483,7 @@ fuck.you('Bob', 'Alice')
 
 ```ruby
 fuck.zayn('Alice')
-#=> { 'message' => ''Ask me if I give a motherfuck ?!!', 'subtitle' => '- Alice' }
+#=> { 'message' => 'Ask me if I give a motherfuck ?!!', 'subtitle' => '- Alice' }
 ```
 
 #### Zero
