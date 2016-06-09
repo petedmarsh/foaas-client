@@ -464,3 +464,10 @@ fuck.you('Bob', 'Alice')
 fuck.zayn('Alice')
 #=> { 'message' => ''Ask me if I give a motherfuck ?!!', 'subtitle' => '- Alice' }
 ```
+
+#### Zero
+
+```ruby
+fuck.zero('Alice')
+#=> { 'message' => 'Zero, thats the number of fucks I give.', 'subtitle' => '- Alice' }
+```

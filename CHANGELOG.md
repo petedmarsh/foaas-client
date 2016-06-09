@@ -18,6 +18,7 @@
   * No
   * Single
   * Think
+  * Zero
 
 ## v1.5.0
 
