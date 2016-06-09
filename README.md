@@ -351,6 +351,13 @@ fuck.thing('it', 'Alice')
 #=> { 'message' => 'Fuck it.', 'subtitle' => '- Alice' }
 ```
 
+#### Think
+
+```ruby
+fuck.think('Bob', 'Alice')
+#=> { 'message' => 'Bob, you think I give a fuck?', 'subtitle' => '- Alice' }
+```
+
 #### This
 
 ```ruby

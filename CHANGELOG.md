@@ -11,6 +11,7 @@
   * Keep calm
   * Me
   * Mornin
+  * Think
 
 ## v1.5.0
 
