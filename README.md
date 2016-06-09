@@ -344,6 +344,13 @@ fuck.pink('Alice')
 #=> { 'message' => 'Well, Fuck me pink.', 'subtitle' => '- Alice' }
 ```
 
+#### Pulp
+
+```ruby
+fuck.pulp('English', 'Alice')
+#=> { 'messsage' => 'English, motherfucker, do you speak it?', '- Alice' }
+```
+
 #### Retard
 
 ```ruby
