@@ -257,6 +257,13 @@ fuck.linus('Bob', 'Alice')
 #=> { 'message' => 'Bob, there aren't enough swear-words in the English language, so now I'll have to call you perkeleen vittupää just to express my disgust and frustration with this crap.', 'subtitle' => '- Alice' }
 ```
 
+#### Look
+
+```ruby
+fuck.look('Bob', 'Alice')
+#=> { 'message' => 'Bob, do I look like I give a fuck?', 'subtitle' => '- Alice' }
+```
+
 #### Madison
 
 ```ruby
