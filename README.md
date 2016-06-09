@@ -62,7 +62,7 @@ fuck.anyway('Acme', 'Alice')
 #=> { 'message' => 'Who the fuck are you anyway, Acme, why are you stirring up so much trouble, and, who pays you?', 'subtitle' => '- Alice' }
 ```
 
-### Awesome
+#### Awesome
 
 ```ruby
 fuck.awesome('Alice')

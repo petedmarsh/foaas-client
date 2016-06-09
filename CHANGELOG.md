@@ -23,6 +23,7 @@
   * Think
   * Zero
 * Fix shoutcloud example in README (wrong Hash syntax)
+* Fix example for Awesome method in README (too few tite hashes)
 
 ## v1.5.0
 
