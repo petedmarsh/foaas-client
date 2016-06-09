@@ -289,7 +289,7 @@ fuck.looking('Alice')
 
 ```ruby
 fuck.madison('Bob', 'Alice')
-#=> { 'What you\'ve said is one of the most insantely idiotic things I have ever heard, Bob. At no point in your rambling, incoherent response were you even close to anything that could be considered a rational thought. Everyone in this room is now dumber for having listened to it. I award you no points Bob, and may God have mercy on your soul.', 'subtitle' => '- Alice' }
+#=> { 'message' => What you\'ve said is one of the most insantely idiotic things I have ever heard, Bob. At no point in your rambling, incoherent response were you even close to anything that could be considered a rational thought. Everyone in this room is now dumber for having listened to it. I award you no points Bob, and may God have mercy on your soul.', 'subtitle' => '- Alice' }
 ```
 
 ### Me

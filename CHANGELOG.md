@@ -24,6 +24,7 @@
   * Zero
 * Fix shoutcloud example in README (wrong Hash syntax)
 * Fix example for Awesome method in README (too few tite hashes)
+* Fix example for Madison method in README (missing 'message' key)
 
 ## v1.5.0
 
