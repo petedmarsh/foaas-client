@@ -264,6 +264,13 @@ fuck.look('Bob', 'Alice')
 #=> { 'message' => 'Bob, do I look like I give a fuck?', 'subtitle' => '- Alice' }
 ```
 
+#### Looking
+
+```ruby
+fuck.looking('Alice')
+#=> { 'message' => 'Looking for a fuck to give.', 'subtitle' => '- Alice' }
+```
+
 #### Madison
 
 ```ruby

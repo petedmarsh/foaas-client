@@ -11,6 +11,7 @@
   * Keep
   * Keep calm
   * Look
+  * Looking
   * Me
   * Mornin
   * Single
