@@ -3,6 +3,7 @@
 ## HEAD
 
 * Implement the following FOAAS methods:
+  * Anyway
   * Back
   * Bday
   * Bm
