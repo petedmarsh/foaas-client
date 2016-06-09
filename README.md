@@ -358,6 +358,13 @@ fuck.retard('Alice')
 #=> { 'message' => 'You Fucktard!', 'subtitle' => '- Alice' }
 ```
 
+#### Sake
+
+```ruby
+fuck.sake('Alice')
+#=> { 'message' => 'For Fuck's sake!', 'subtitle' => '- Alice'}
+```
+
 #### Shakespeare
 
 ```ruby
