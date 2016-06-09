@@ -62,6 +62,13 @@ fuck.awesome('Alice')
 #=> { 'message' => 'This is Fucking Awesome.', subtitle => '- Alice' }
 ```
 
+#### Back
+
+```ruby
+fuck.back('Bob', 'Alice')
+#=> { 'message' => 'Bob, back the fuck off.', 'subtitle' => '- Alice' }
+```
+
 #### Ballmer
 
 ```ruby
