@@ -4,6 +4,7 @@
 
 * Implement the following FOAAS methods:
   * Bday
+  * Bm
   * Greed
   * Keep calm
   * Mornin

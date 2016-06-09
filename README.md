@@ -83,6 +83,13 @@ fuck.because('Alice')
 #=> { 'message' => 'Why? Because Fuck you, that\'s why.', 'subtitle' => '- Alice' }
 ```
 
+#### Bm
+
+```ruby
+fuck.bm('Bob', 'Alice')
+#=> { 'message' => 'Bravo mike, Bob.', 'subtitle' => '-Alice '}
+```
+
 #### Bucket
 
 ```ruby
