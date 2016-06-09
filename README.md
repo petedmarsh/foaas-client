@@ -337,6 +337,13 @@ fuck.shutup('Bob', 'Alice')
 #=> { 'messasge' => 'Bob, shut the fuck up.', 'subtitle' => '- Alice' }
 ```
 
+#### Single
+
+```ruby
+fuck.single('Alice')
+#=> { 'message' => 'Not a single fuck was given.', 'subtitle' => '- Alice' }
+```
+
 #### Thanks
 
 ```ruby

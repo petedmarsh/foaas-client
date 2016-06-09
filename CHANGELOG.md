@@ -12,6 +12,7 @@
   * Keep calm
   * Me
   * Mornin
+  * Single
   * Think
 
 ## v1.5.0
