@@ -69,6 +69,13 @@ fuck.ballmer('Bob', 'Alice', 'Clara')
 #=> { 'message' => 'Fucking Bob is a fucking pussy. I'm going to fucking bury that guy, I have done it before, and I will do it again. I'm going to fucking kill Alice.', 'subtitle' => '- Clara' }
 ```
 
+#### Bday
+
+```ruby
+fuck.bady('Bob', 'Alice')
+#=> { 'message' => 'Happy Fucking Birthday, Bob', 'subtitle' => '- Alice'}
+```
+
 #### Because
 
 ```ruby

@@ -1,5 +1,10 @@
 # Changelog
 
+## HEAD
+
+* Implement the following FOAAS methods:
+  * Bday
+
 ## v1.5.0
 
 * Implement the following FOAAS methods:
