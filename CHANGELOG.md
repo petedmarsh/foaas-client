@@ -4,6 +4,7 @@
 
 * Implement the following FOAAS methods:
   * Bday
+  * Keep calm
 
 ## v1.5.0
 

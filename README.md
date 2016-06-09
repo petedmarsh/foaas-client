@@ -194,6 +194,13 @@ fuck.field('Alice', 'Bob', 'Clara')
 fuck.flying('Alice')
 #=> { 'message' => 'I don\'t give a flying fuck.', 'subtitle' => '- Alice' }
 
+#### Keep calm
+
+```ruby
+fuck.keepcalm('paddle', 'Alice')
+#=> { 'message' => 'Keep the fuck calm and paddle!', 'subtitle' => '- Alice' }
+```
+
 #### King
 
 ```ruby
