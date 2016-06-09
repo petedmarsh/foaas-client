@@ -7,6 +7,7 @@
   * Bday
   * Bm
   * Gfy
+  * Give
   * Greed
   * Keep
   * Keep calm

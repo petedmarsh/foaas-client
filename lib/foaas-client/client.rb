@@ -7,7 +7,7 @@ module Foaas
 
   	URL = Addressable::Template.new("http://foaas.com/{method}{/name}/{from}{/other}")
 
-    METHODS_ONE_PARAM = [:awesome, :because, :bucket, :bye, :cool, :diabetes, :everyone, :everything, :family, :fascinating, :flying, :life, :looking, :me, :mornin, :pink, :retard, :thanks, :this, :tucker, :thumbs,:what, :zayn]
+    METHODS_ONE_PARAM = [:awesome, :because, :bucket, :bye, :cool, :diabetes, :everyone, :everything, :family, :fascinating, :flying, :give, :life, :looking, :me, :mornin, :pink, :retard, :thanks, :this, :tucker, :thumbs,:what, :zayn]
     METHODS_TWO_PARAMS = [:back, :bday, :bm, :bus, :caniuse, :chainsaw, :dalton, :donut, :greed, :gfy, :keep, :keepcalm, :king, :linus, :look, :madison, :no, :nugget, :off, :outside, :shakespeare, :shutup, :single,:think, :you, :xmas, :yoda]
     METHODS_THREE_PARAMS = [:ballmer, :dosomething, :field]
 

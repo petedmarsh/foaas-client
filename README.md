@@ -215,6 +215,13 @@ fuck.gfy('Bob', 'Alice')
 #=> { 'message' => 'Golf foxtrot yankee, Bob.', 'subtilte' => '- Alice' }
 ```
 
+### Give
+
+```ruby
+fuck.give('Alice')
+#=> { 'message' => 'I give zero fucks.', 'subtitle' => '- Alice' }
+```
+
 #### Greed
 
 ```ruby
