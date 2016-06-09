@@ -292,6 +292,13 @@ fuck.mornin('Alice')
 #=> { 'message' => 'Happy fuckin\' Morning\'!', 'subtitle' => '- Alice'}
 ```
 
+#### No
+
+```ruby
+fuck.no('Bob', Alice')
+#=> { 'message' => 'No fucks given.', 'subtitle' => '- Alice'}
+```
+
 #### Nugget
 
 ```ruby
