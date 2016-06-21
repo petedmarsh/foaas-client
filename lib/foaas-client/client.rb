@@ -15,13 +15,13 @@ module Foaas
         kwargs = {}
         kwargs = args[-1] if args[-1].class == Hash
         if METHODS_TWO_PARAMS.include? sym
-          make_request(URL.expand(method: sym, name: args[0], from: args[1]), args[2], i18n=kwargs[:i18n], shoutcloud=kwargs[:shoutcloud])
+          make_request(URL.expand(method: sym, name: args[0], from: args[1]), type=kwargs[:type], i18n=kwargs[:i18n], shoutcloud=kwargs[:shoutcloud])
         elsif  METHODS_ONE_PARAM.include? sym
-          make_request(URL.expand(method: sym, from: args[0]), args[1], i18n=kwargs[:i18n], shoutcloud=kwargs[:shoutcloud])
+          make_request(URL.expand(method: sym, from: args[0]), type=kwargs[:type], i18n=kwargs[:i18n], shoutcloud=kwargs[:shoutcloud])
         elsif METHODS_THREE_PARAMS.include? sym
-          make_request(URL.expand(method: sym, name: args[0], from: args[1], other: args[2]), args[3], i18n=kwargs[:i18n], shoutcloud=kwargs[:shoutcloud])
+          make_request(URL.expand(method: sym, name: args[0], from: args[1], other: args[2]), type=kwargs[:type], i18n=kwargs[:i18n], shoutcloud=kwargs[:shoutcloud])
         elsif sym == :thing
-          make_request(URL.expand(method: args[0], from: args[1]), args[2], i18n=kwargs[:i18n], shoutcloud=kwargs[:shoutcloud])
+          make_request(URL.expand(method: args[0], from: args[1]), type=kwargs[:type], i18n=kwargs[:i18n], shoutcloud=kwargs[:shoutcloud])
         else
           super(sym, *args, &block)
         end
@@ -35,13 +35,13 @@ module Foaas
       METHODS_ONE_PARAM.include?(sym) or METHODS_TWO_PARAMS.include?(sym) or sym == :thing or super(sym, include_private)
     end
 
-    def version(type = nil)
-      make_request(URL.expand(method: :version), type)
+    def version(opts={})
+      make_request(URL.expand(method: :version), opts[:type])
     end
 
   	private
 
-  	def make_request(url, type, i18n=nil, shoutcloud=false)
+  	def make_request(url, type=:json, i18n=nil, shoutcloud=false)
       query_params = {}
       url = url.to_s
       accept_type = case type

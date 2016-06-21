@@ -4,6 +4,7 @@
 
 * Implement the following FOAAS methods:
   * Horse
+* Change `type` argument to be a kwarg rather than a straight parameter
 
 ## v1.6.0
 

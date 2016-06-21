@@ -31,7 +31,7 @@ describe Foaas::Client do
         let(:url) { "http://foaas.com/#{method}/#{name}/#{from}/#{other}?i18n=es" }
 
         it 'sets the i18n parameter on the url' do
-          client.send(method, name, from, other, type, i18n: i18n)
+          client.send(method, name, from, other, type: type, i18n: i18n)
         end
       end
 
@@ -42,7 +42,7 @@ describe Foaas::Client do
         let(:url) { "http://foaas.com/#{method}/#{name}/#{from}/#{other}?shoutcloud" }
 
         it 'sets the shoutcloud parameter on the url' do
-          client.send(method, name, from, other, type, shoutcloud: true)
+          client.send(method, name, from, other, type: type, shoutcloud: true)
         end
       end
 
@@ -53,12 +53,12 @@ describe Foaas::Client do
           let(:accept) { :json }
 
           it 'defaults to JSON' do
-            client.send(method, name, from, other, type)
+            client.send(method, name, from, other, type: type)
           end
 
 
           it 'parses the response into a hash' do
-            client.send(method, name, from, other, type).should == { 'message' => '', 'subtitle' => ''}
+            client.send(method, name, from, other, type: type).should == { 'message' => '', 'subtitle' => ''}
           end
 
         end
@@ -71,7 +71,7 @@ describe Foaas::Client do
             let(:accept) { :html }
 
             it 'specifies text/html as the accept type' do
-              client.send(method, name, from, other, type)
+              client.send(method, name, from, other, type: type)
             end
           end
 
@@ -81,7 +81,7 @@ describe Foaas::Client do
             let(:accept) { :json}
 
             it 'specifies application/json as the accept type' do
-              client.send(method, name, from, other, type)
+              client.send(method, name, from, other, type: type)
             end
 
           end
@@ -93,7 +93,7 @@ describe Foaas::Client do
             let(:accept) { :json}
 
             it 'specifies application/json as the accept type' do
-              client.send(method, name, from, other, type)
+              client.send(method, name, from, other, type: type)
             end
 
           end
@@ -104,7 +104,7 @@ describe Foaas::Client do
             let(:accept) { 'text/plain' }
 
             it 'specifies text/plain as the accept type' do
-              client.send(method, name, from, other, type)
+              client.send(method, name, from, other, type: type)
             end
           end
 
@@ -114,7 +114,7 @@ describe Foaas::Client do
             let(:accept) { :xml }
 
             it 'specifies application/xml as the acccept type' do
-              client.send(method, name, from, other, type)
+              client.send(method, name, from, other, type: type)
             end
           end
 
@@ -146,7 +146,7 @@ describe Foaas::Client do
         let(:url) { "http://foaas.com/#{method}/#{name}/#{from}?i18n=es" }
 
         it 'sets the i18n parameter on the url' do
-          client.send(method, name, from, type, i18n: i18n)
+          client.send(method, name, from, type: type, i18n: i18n)
         end
       end
 
@@ -157,7 +157,7 @@ describe Foaas::Client do
         let(:url) { "http://foaas.com/#{method}/#{name}/#{from}?shoutcloud" }
 
         it 'sets the shoutcloud parameter on the url' do
-          client.send(method, name, from, type, shoutcloud: true)
+          client.send(method, name, from, type: type, shoutcloud: true)
         end
       end
 
@@ -168,11 +168,11 @@ describe Foaas::Client do
           let(:accept) { :json }
 
           it 'defaults to JSON' do
-            client.send(method, name, from, type)
+            client.send(method, name, from, type: type)
           end
 
           it 'parses the response into a hash' do
-            client.send(method, name, from, type).should == { 'message' => '', 'subtitle' => ''}
+            client.send(method, name, from, type: type).should == { 'message' => '', 'subtitle' => ''}
           end
 
         end
@@ -185,7 +185,7 @@ describe Foaas::Client do
             let(:accept) { :html }
 
             it 'specifies text/html as the accept type' do
-              client.send(method, name, from, type)
+              client.send(method, name, from, type: type)
             end
           end
 
@@ -195,7 +195,7 @@ describe Foaas::Client do
             let(:accept) { :json}
 
             it 'specifies application/json as the accept type' do
-              client.send(method, name, from, type)
+              client.send(method, name, from, type: type)
             end
 
           end
@@ -207,7 +207,7 @@ describe Foaas::Client do
             let(:accept) { :json}
 
             it 'specifies application/json as the accept type' do
-              client.send(method, name, from, type)
+              client.send(method, name, from, type: type)
             end
 
           end
@@ -218,7 +218,7 @@ describe Foaas::Client do
             let(:accept) { 'text/plain' }
 
             it 'specifies text/plain as the accept type' do
-              client.send(method, name, from, type)
+              client.send(method, name, from, type: type)
             end
           end
 
@@ -228,7 +228,7 @@ describe Foaas::Client do
             let(:accept) { :xml }
 
             it 'specifies application/xml as the acccept type' do
-              client.send(method, name, from, type)
+              client.send(method, name, from, type: type)
             end
           end
 
@@ -258,7 +258,7 @@ describe Foaas::Client do
         let(:url) { "http://foaas.com/#{method}/#{from}?i18n=es" }
 
         it 'sets the i18n parameter on the url' do
-          client.send(method, from, type, i18n: i18n)
+          client.send(method, from, type: type, i18n: i18n)
         end
       end
 
@@ -269,7 +269,7 @@ describe Foaas::Client do
         let(:url) { "http://foaas.com/#{method}/#{from}?shoutcloud" }
 
         it 'sets the shoutcloud parameter on the url' do
-          client.send(method, from, type, shoutcloud: true)
+          client.send(method, from, type: type, shoutcloud: true)
         end
       end
 
@@ -280,11 +280,11 @@ describe Foaas::Client do
           let(:accept) { :json }
 
           it 'defaults to JSON' do
-            client.send(method, from, type)
+            client.send(method, from, type: type)
           end
 
           it 'parses the response into a hash' do
-            client.send(method, from, type).should == { 'message' => '', 'subtitle' => ''}
+            client.send(method, from, type: type).should == { 'message' => '', 'subtitle' => ''}
           end
 
         end
@@ -297,7 +297,7 @@ describe Foaas::Client do
             let(:accept) { :html }
 
             it 'specifies text/html as the accept type' do
-              client.send(method, from, type)
+              client.send(method, from, type: type)
             end
           end
 
@@ -307,7 +307,7 @@ describe Foaas::Client do
             let(:accept) { :json }
 
             it 'specifies application/json as the accept type' do
-              client.send(method, from, type)
+              client.send(method, from, type: type)
             end
 
           end
@@ -319,7 +319,7 @@ describe Foaas::Client do
             let(:accept) { :json}
 
             it 'specifies application/json as the accept type' do
-              client.send(method, from, type)
+              client.send(method, from, type: type)
             end
 
           end
@@ -330,7 +330,7 @@ describe Foaas::Client do
             let(:accept) { 'text/plain'}
 
             it 'specifies text/plain as the accept type' do
-              client.send(method, from, type)
+              client.send(method, from, type: type)
             end
           end
 
@@ -339,7 +339,7 @@ describe Foaas::Client do
             let(:accept) { :xml }
 
             it 'specifies application/xml as the accept type' do
-              client.send(method, from, type)
+              client.send(method, from, type: type)
             end
           end
         end
@@ -367,7 +367,7 @@ describe Foaas::Client do
         let(:url) { "http://foaas.com/#{thing}/#{from}?i18n=es" }
 
         it 'sets the i18n parameter on the url' do
-          client.thing(thing, from, type, i18n: i18n)
+          client.thing(thing, from, type: type, i18n: i18n)
         end
       end
 
@@ -379,7 +379,7 @@ describe Foaas::Client do
         let(:url) { "http://foaas.com/#{thing}/#{from}?shoutcloud" }
 
         it 'sets the shoutcloud parameter on the url' do
-          client.thing(thing, from, type, shoutcloud: true)
+          client.thing(thing, from, type: type, shoutcloud: true)
         end
     end
 
@@ -390,11 +390,11 @@ describe Foaas::Client do
         let(:accept) { :json }
 
         it 'defaults to JSON' do
-          client.thing(thing, from, type)
+          client.thing(thing, from, type: type)
         end
 
         it 'parses the response into a hash' do
-          client.thing(thing, from, type).should == { 'message' => '', 'subtitle' => ''}
+          client.thing(thing, from, type: type).should == { 'message' => '', 'subtitle' => ''}
         end
 
       end
@@ -407,7 +407,7 @@ describe Foaas::Client do
           let(:accept) { :html }
 
           it 'specifies text/html as the accept type' do
-            client.thing(thing, from, type)
+            client.thing(thing, from, type: type)
           end
         end
 
@@ -417,7 +417,7 @@ describe Foaas::Client do
           let(:accept) { :json }
 
           it 'specifies application/json as the accept type' do
-            client.thing(thing, from, type)
+            client.thing(thing, from, type: type)
           end
 
         end
@@ -429,7 +429,7 @@ describe Foaas::Client do
           let(:accept) { :json}
 
           it 'specifies application/json as the accept type' do
-            client.thing(thing, from, type)
+            client.thing(thing, from, type: type)
           end
 
         end
@@ -440,7 +440,7 @@ describe Foaas::Client do
           let(:accept) { 'text/plain' }
 
           it 'specifies text/plain as the accept type' do
-            client.thing(thing, from, type)
+            client.thing(thing, from, type: type)
           end
         end
 
@@ -450,7 +450,7 @@ describe Foaas::Client do
           let(:accept) { :xml }
 
           it 'specifies application/xml as the accept type' do
-            client.thing(thing, from, type)
+            client.thing(thing, from, type: type)
           end
         end
       end
@@ -536,7 +536,7 @@ describe Foaas::Client do
           let(:accept) { :html }
 
           it 'specifies text/html as the accept type' do
-            client.version(type)
+            client.version(type: type)
           end
         end
 
@@ -546,7 +546,7 @@ describe Foaas::Client do
           let(:accept) { :json }
 
           it 'specifies application/json as the accept type' do
-            client.version(type)
+            client.version(type: type)
           end
 
         end
@@ -558,7 +558,7 @@ describe Foaas::Client do
           let(:accept) { :json}
 
           it 'specifies application/json as the accept type' do
-            client.version(type)
+            client.version(type: type)
           end
 
         end
@@ -569,7 +569,7 @@ describe Foaas::Client do
           let(:accept) { 'text/plain' }
 
           it 'specifies text/plain as the accept type' do
-            client.version(type)
+            client.version(type: type)
           end
         end
 
@@ -579,7 +579,7 @@ describe Foaas::Client do
           let(:accept) { :xml }
 
           it 'specifies application/xml as the accept type' do
-            client.version(type)
+            client.version(type: type)
           end
         end
       end

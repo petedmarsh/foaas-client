@@ -30,19 +30,19 @@ fuck.off('Bob', 'Alice', i18n: :es)
 ### Response Types
 
 ```ruby
-fuck.off('Bob', 'Alice', :html)
+fuck.off('Bob', 'Alice', type: :html)
 #=> '<html>...</html>'
 
-fuck.off('Bob', 'Alice', :json)
+fuck.off('Bob', 'Alice', type: :json)
 #=> '{ "message": "Fuck off, Bob.", "subtitle": "- Alice" }'
 
-fuck.off('Bob', 'Alice', :jsonp)
+fuck.off('Bob', 'Alice', type: :jsonp)
 #=> 'fuck && fuck({ "message": "Fuck off, Bob.", "subtitle": "- Alice" });'
 
-fuck.off('Bob', 'Alice', :text)
+fuck.off('Bob', 'Alice', type: :text)
 #=> 'Fuck off, Bob. - Alice'
 
-fuck.off('Bob', 'Alice', :xml)
+fuck.off('Bob', 'Alice', type: :xml)
 #=> '<?xml version="1.0" encoding="utf-8"?>...'
 ```
 
