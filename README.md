@@ -236,6 +236,13 @@ fuck.greed('greed', 'Alice')
 #=> { 'message' => 'The point is, ladies and gentleman, that greed -- for lack of a better word -- is good. :noun is right. greed works. greed clarifies, cuts through, and captures the essence of the evolutionary spirit. greed, in all of its forms -- greed for life, for money, for love, knowledge -- has marked the upward surge of mankind', 'subtitle' => '- Alice'}
 ```
 
+#### Horse
+
+```ruby
+fuck.horse('Alice')
+#=> { 'message' => 'Fuck you and the horse you rode in on.', 'subtitle' => '- Alice' }
+```
+
 #### Keep
 
 ```ruby
