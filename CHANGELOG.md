@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## v2.0.0
 
 * Implement the following FOAAS methods:
   * Horse
