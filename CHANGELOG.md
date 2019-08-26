@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.1
+
+* Update dependency on `rest-client` to 1.8.0, earlier versions have known security vulnerabilities.
+
 ## v2.0.0
 
 * Implement the following FOAAS methods:
