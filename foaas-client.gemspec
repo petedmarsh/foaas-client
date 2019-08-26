@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'rest-client', '~> 1.6', '>= 1.6.7'
+  spec.add_dependency 'rest-client', '~> 1.8', '>= 1.8.0'
   spec.add_dependency 'addressable', '~> 2.3', '>= 2.3.5'
   spec.add_development_dependency 'rspec', '~> 2.12', '>= 2.12.0'
 
